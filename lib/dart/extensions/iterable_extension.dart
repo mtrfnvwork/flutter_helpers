@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-extension IterableExtension<T, K extends num> on Iterable<T> {
+extension IterableExtension<T, K extends num, V> on Iterable<T> {
   T? firstOrDefault([bool Function(T x)? test]) => isNotEmpty
       ? test != null
           ? firstWhere(test)
@@ -26,6 +26,22 @@ extension IterableExtension<T, K extends num> on Iterable<T> {
   K max(K Function(T x) toElement) {
     assert(isNotEmpty);
     return (map(toElement)).max();
+  }
+
+  Iterable<T> distinct() => toSet();
+
+  Iterable<T> distinctBy(V Function(T x) toElement) {
+    var result = <V, T>{};
+
+    for (var item in this) {
+      var key = toElement(item);
+
+      if (!result.containsKey(key)) {
+        result[key] = item;
+      }
+    }
+
+    return result.values;
   }
 }
 
