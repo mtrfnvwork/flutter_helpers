@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-extension IterableExtension<T, K extends num, V> on Iterable<T> {
+extension IterableExtension<T, K extends num, V, D extends DateTime> on Iterable<T> {
   T? firstOrDefault([bool Function(T x)? test]) => isNotEmpty
       ? test != null
           ? firstWhere(test)
@@ -15,17 +15,27 @@ extension IterableExtension<T, K extends num, V> on Iterable<T> {
 
   K sum(K Function(T x) toElement) {
     assert(isNotEmpty);
-    return (map(toElement)).sum();
+    return map(toElement).sum();
   }
 
   K min(K Function(T x) toElement) {
     assert(isNotEmpty);
-    return (map(toElement)).min();
+    return map(toElement).min();
   }
 
   K max(K Function(T x) toElement) {
     assert(isNotEmpty);
-    return (map(toElement)).max();
+    return map(toElement).max();
+  }
+
+  D minDate(D Function(T x) toElement) {
+    assert(isNotEmpty);
+    return map(toElement).min();
+  }
+
+  D maxDate(D Function(T x) toElement) {
+    assert(isNotEmpty);
+    return map(toElement).max();
   }
 
   Iterable<T> distinct() => toSet();
