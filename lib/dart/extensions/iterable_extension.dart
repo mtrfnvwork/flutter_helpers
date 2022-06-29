@@ -13,6 +13,8 @@ extension IterableExtension<T, K extends num, V, D extends DateTime> on Iterable
           : last
       : null;
 
+  int count(bool Function(T x) test) => isNotEmpty ? where(test).length : 0;
+
   K sum(K Function(T x) toElement) {
     assert(isNotEmpty);
     return map(toElement).sum();
