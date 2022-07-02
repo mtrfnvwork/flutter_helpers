@@ -1,6 +1,6 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
-Future<String> showTextFormFieldDialog({
+Future<String?> showTextFormFieldDialog({
   required BuildContext context,
   String? initialValue,
   String? noButtonText,
@@ -14,23 +14,22 @@ Future<String> showTextFormFieldDialog({
 }) async {
   assert(validator == null || errorText != null);
 
-  return await showDialog(
-        context: context,
-        builder: (BuildContext dialogContext) {
-          return _TextFormFieldDialog(
-            initialValue: initialValue,
-            cancelButtonText: noButtonText,
-            confirmButtonText: yesButtonText,
-            title: title,
-            hintText: hintText,
-            labelText: labelText,
-            obscureText: obscureText,
-            validator: validator,
-            errorText: errorText,
-          );
-        },
-      ) ??
-      '';
+  return showDialog(
+    context: context,
+    builder: (BuildContext dialogContext) {
+      return _TextFormFieldDialog(
+        initialValue: initialValue,
+        cancelButtonText: noButtonText,
+        confirmButtonText: yesButtonText,
+        title: title,
+        hintText: hintText,
+        labelText: labelText,
+        obscureText: obscureText,
+        validator: validator,
+        errorText: errorText,
+      );
+    },
+  );
 }
 
 class _TextFormFieldDialog extends StatefulWidget {
