@@ -1,8 +1,6 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
-TimeOfDay parseTimeOfDay({
-  required String input,
-}) {
+TimeOfDay parseTimeOfDay(String input) {
   var split = input.split(':');
 
   return TimeOfDay(
