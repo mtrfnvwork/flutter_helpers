@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_helpers/flutter/helpers/focus_helper.dart';
-import 'package:flutter_helpers/flutter/widgets/tap_detector.dart';
+part of '../../flutter_helpers.dart';
 
 class PageContainer extends StatelessWidget {
   const PageContainer({

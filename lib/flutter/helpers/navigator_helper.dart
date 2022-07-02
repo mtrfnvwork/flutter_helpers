@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../../flutter_helpers.dart';
 
 Future<T?> push<T extends Object?>(
   BuildContext context,

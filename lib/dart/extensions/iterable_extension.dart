@@ -1,4 +1,4 @@
-import 'dart:math' as math;
+part of '../../flutter_helpers.dart';
 
 extension IterableExtension<T, K extends num, V, D extends DateTime> on Iterable<T> {
   T? firstOrDefault([bool Function(T x)? test]) => isNotEmpty

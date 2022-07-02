@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../../flutter_helpers.dart';
 
 class DialogButton extends StatelessWidget {
   const DialogButton({

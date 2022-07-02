@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_helpers/flutter/widgets/tap_detector.dart';
-import 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../flutter_helpers.dart';
 
 class CheckBoxButton extends StatelessWidget {
   const CheckBoxButton({

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../../flutter_helpers.dart';
 
 abstract class StateExt<T extends StatefulWidget> extends State<T> {
   void ss(VoidCallback fn) {
