@@ -1,4 +1,4 @@
-part of '../../flutter_helpers.dart';
+part of 'package:flutter_helpers/flutter_helpers.dart';
 
 class TapDetector extends StatelessWidget {
   const TapDetector({
