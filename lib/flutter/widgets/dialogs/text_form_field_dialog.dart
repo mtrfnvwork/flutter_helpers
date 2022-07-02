@@ -8,7 +8,7 @@ Future<String> showTextFormFieldDialog({
   String? title,
   String? hintText,
   String? labelText,
-  bool? obscureText,
+  bool obscureText = false,
   bool Function(String text)? validator,
   String? errorText,
 }) async {
@@ -53,7 +53,7 @@ class _TextFormFieldDialog extends StatefulWidget {
   final String? title;
   final String? hintText;
   final String? labelText;
-  final bool? obscureText;
+  final bool obscureText;
   final bool Function(String text)? validator;
   final String? errorText;
 
@@ -93,15 +93,16 @@ class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text('Изменение пароля'),
+      title: widget.title != null ? Text(widget.title!) : null,
       content: TextFormField(
         autofocus: true,
         controller: _controller,
         decoration: InputDecoration(
-          hintText: 'Новый пароль',
+          hintText: widget.hintText,
+          labelText: widget.labelText,
           errorText: _errorText,
         ),
-        obscureText: true,
+        obscureText: widget.obscureText,
       ),
       actions: [
         DialogButton(
