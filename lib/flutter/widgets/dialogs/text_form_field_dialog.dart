@@ -2,6 +2,7 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 
 Future<String> showTextFormFieldDialog({
   required BuildContext context,
+  String? initialValue,
   String? noButtonText,
   String? yesButtonText,
   String? title,
@@ -17,6 +18,7 @@ Future<String> showTextFormFieldDialog({
         context: context,
         builder: (BuildContext dialogContext) {
           return _TextFormFieldDialog(
+            initialValue: initialValue,
             cancelButtonText: noButtonText,
             confirmButtonText: yesButtonText,
             title: title,
@@ -34,6 +36,7 @@ Future<String> showTextFormFieldDialog({
 class _TextFormFieldDialog extends StatefulWidget {
   const _TextFormFieldDialog({
     Key? key,
+    required this.initialValue,
     required this.cancelButtonText,
     required this.confirmButtonText,
     required this.title,
@@ -44,6 +47,7 @@ class _TextFormFieldDialog extends StatefulWidget {
     required this.errorText,
   }) : super(key: key);
 
+  final String? initialValue;
   final String? cancelButtonText;
   final String? confirmButtonText;
   final String? title;
@@ -58,7 +62,7 @@ class _TextFormFieldDialog extends StatefulWidget {
 }
 
 class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
-  final _controller = TextEditingController();
+  late TextEditingController _controller;
 
   String? _errorText;
 
@@ -78,6 +82,12 @@ class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
         _errorText = widget.errorText;
       });
     }
+  }
+
+  @override
+  void initState() {
+    _controller = TextEditingController(text: widget.initialValue ?? '');
+    super.initState();
   }
 
   @override
