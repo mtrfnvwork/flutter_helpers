@@ -8,11 +8,12 @@ import 'package:intl/intl.dart';
 part 'package:flutter_helpers/dart/extensions/date_time_extension.dart';
 part 'package:flutter_helpers/dart/extensions/iterable_extension.dart';
 part 'package:flutter_helpers/dart/extensions/string_extension.dart';
+
+part 'package:flutter_helpers/dart/extensions/time_of_day_extension.dart';
+
 part 'package:flutter_helpers/flutter/helpers/focus_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/navigator_helper.dart';
-
 part 'package:flutter_helpers/flutter/helpers/parsers.dart';
-
 part 'package:flutter_helpers/flutter/helpers/state_helper.dart';
 part 'package:flutter_helpers/flutter/widgets/center_text.dart';
 part 'package:flutter_helpers/flutter/widgets/check_box_button.dart';
