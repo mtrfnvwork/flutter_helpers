@@ -6,16 +6,21 @@ class TapDetector extends StatelessWidget {
     required this.child,
     this.padding = EdgeInsets.zero,
     required this.onTap,
+    this.onDoubleTap,
   }) : super(key: key);
 
   factory TapDetector.icon({
     required IconData data,
     Color? color,
     double? size,
-    required VoidCallback onTap,
+    EdgeInsets padding = EdgeInsets.zero,
+    required VoidCallback? onTap,
+    VoidCallback? onDoubleTap,
   }) {
     return TapDetector(
+      padding: padding,
       onTap: onTap,
+      onDoubleTap: onDoubleTap,
       child: Icon(
         data,
         color: color,
@@ -26,13 +31,15 @@ class TapDetector extends StatelessWidget {
 
   final Widget child;
   final EdgeInsets padding;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
+  final VoidCallback? onDoubleTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: onTap,
+      onDoubleTap: onDoubleTap,
       child: Padding(
         padding: padding,
         child: child,
