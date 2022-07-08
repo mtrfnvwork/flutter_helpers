@@ -1,17 +1,43 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
 extension IterableExtension<T, K extends num, V, D extends DateTime> on Iterable<T> {
-  T? firstOrDefault([bool Function(T x)? test]) => isNotEmpty
-      ? test != null
-          ? firstWhere(test)
-          : first
-      : null;
+  T? firstOrDefault([bool Function(T x)? test]) {
+    if (isEmpty) {
+      return null;
+    }
 
-  T? lastOrDefault([bool Function(T x)? test]) => isNotEmpty
-      ? test != null
-          ? lastWhere(test)
-          : last
-      : null;
+    if (test == null) {
+      return first;
+    }
+
+    for (var item in this) {
+      if (test(item)) {
+        return item;
+      }
+    }
+
+    return null;
+  }
+
+  T? lastOrDefault([bool Function(T x)? test]) {
+    if (isEmpty) {
+      return null;
+    }
+
+    if (test == null) {
+      return last;
+    }
+
+    for (var i = length - 1; i >= 0; i++) {
+      var item = elementAt(i);
+
+      if (test(item)) {
+        return item;
+      }
+    }
+
+    return null;
+  }
 
   int count(bool Function(T x) test) => isNotEmpty ? where(test).length : 0;
 
