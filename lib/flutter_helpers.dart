@@ -16,9 +16,7 @@ part 'package:flutter_helpers/flutter/helpers/state_helper.dart';
 part 'package:flutter_helpers/flutter/widgets/center_text.dart';
 part 'package:flutter_helpers/flutter/widgets/check_box_button.dart';
 part 'package:flutter_helpers/flutter/widgets/dialog_button.dart';
-
 part 'package:flutter_helpers/flutter/widgets/dialogs/snack_bar.dart';
-
 part 'package:flutter_helpers/flutter/widgets/dialogs/text_form_field_dialog.dart';
 part 'package:flutter_helpers/flutter/widgets/dialogs/yes_no_dialog.dart';
 part 'package:flutter_helpers/flutter/widgets/h.dart';
@@ -42,7 +40,7 @@ class FlutterHelpers {
     }
   }
 
-  static void textFormFieldDialogSettings({
+  static void changeTextFormFieldDialogSettings({
     String? cancelButtonText,
     String? confirmButtonText,
   }) {
@@ -53,5 +51,13 @@ class FlutterHelpers {
     if (confirmButtonText != null) {
       TextFormFieldDialogSettings.confirmButtonText = confirmButtonText;
     }
+  }
+
+  static void changeSnackBarSettings({
+    Color? backgroundColor,
+    TextStyle? textStyle,
+  }) {
+    SnackBarSettings.backgroundColor = backgroundColor;
+    SnackBarSettings.textStyle = textStyle;
   }
 }

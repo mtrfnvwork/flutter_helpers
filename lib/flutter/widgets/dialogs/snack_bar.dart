@@ -8,7 +8,11 @@ void showSnackBar(
     ..hideCurrentSnackBar()
     ..showSnackBar(
       SnackBar(
-        content: Text(text),
+        backgroundColor: SnackBarSettings.backgroundColor,
+        content: Text(
+          text,
+          style: SnackBarSettings.textStyle,
+        ),
       ),
     );
 }

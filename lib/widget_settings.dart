@@ -9,3 +9,8 @@ class TextFormFieldDialogSettings {
   static String cancelButtonText = 'Отмена';
   static String confirmButtonText = 'Подтвердить';
 }
+
+class SnackBarSettings {
+  static Color? backgroundColor;
+  static TextStyle? textStyle;
+}
