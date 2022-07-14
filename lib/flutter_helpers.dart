@@ -20,6 +20,9 @@ part 'package:flutter_helpers/flutter/widgets/dialogs/snack_bar.dart';
 part 'package:flutter_helpers/flutter/widgets/dialogs/text_form_field_dialog.dart';
 part 'package:flutter_helpers/flutter/widgets/dialogs/yes_no_dialog.dart';
 part 'package:flutter_helpers/flutter/widgets/h.dart';
+
+part 'package:flutter_helpers/flutter/widgets/hidden_widget.dart';
+
 part 'package:flutter_helpers/flutter/widgets/page_container.dart';
 part 'package:flutter_helpers/flutter/widgets/radio_button.dart';
 part 'package:flutter_helpers/flutter/widgets/tap_detector.dart';
