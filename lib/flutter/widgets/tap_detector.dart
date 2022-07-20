@@ -42,7 +42,7 @@ class TapDetector extends StatelessWidget {
       onDoubleTap: onDoubleTap,
       child: Text(
         text,
-        style: TextTapDetectorSettings.textStyle,
+        style: style ?? TextTapDetectorSettings.textStyle,
       ),
     );
   }
