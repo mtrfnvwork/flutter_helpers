@@ -14,3 +14,8 @@ class SnackBarSettings {
   static Color? backgroundColor;
   static TextStyle? textStyle;
 }
+
+class TextTapDetectorSettings {
+  static TextStyle? textStyle;
+  static EdgeInsets padding = EdgeInsets.zero;
+}
