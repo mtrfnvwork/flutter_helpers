@@ -16,7 +16,7 @@ Future<String?> showTextFormFieldDialog({
 
   return showDialog(
     context: context,
-    builder: (BuildContext dialogContext) {
+    builder: (dialogContext) {
       return _TextFormFieldDialog(
         initialValue: initialValue,
         cancelButtonText: noButtonText,

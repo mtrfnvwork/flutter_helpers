@@ -33,7 +33,7 @@ class RadioButton<T> extends StatelessWidget {
               ),
             ),
           ),
-          W(16),
+          const W(16),
           Text(
             title,
             style: textStyle,
