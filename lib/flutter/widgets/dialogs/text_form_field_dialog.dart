@@ -11,6 +11,8 @@ Future<String?> showTextFormFieldDialog({
   bool obscureText = false,
   bool Function(String text)? validator,
   String? errorText,
+  int? minLines,
+  int? maxLines = 1,
 }) async {
   assert(validator == null || errorText != null);
 
@@ -27,6 +29,8 @@ Future<String?> showTextFormFieldDialog({
         obscureText: obscureText,
         validator: validator,
         errorText: errorText,
+        minLines: minLines,
+        maxLines: maxLines,
       );
     },
   );
@@ -44,6 +48,8 @@ class _TextFormFieldDialog extends StatefulWidget {
     required this.obscureText,
     required this.validator,
     required this.errorText,
+    required this.minLines,
+    required this.maxLines,
   }) : super(key: key);
 
   final String? initialValue;
@@ -55,6 +61,8 @@ class _TextFormFieldDialog extends StatefulWidget {
   final bool obscureText;
   final bool Function(String text)? validator;
   final String? errorText;
+  final int? minLines;
+  final int? maxLines;
 
   @override
   State<_TextFormFieldDialog> createState() => _TextFormFieldDialogState();
@@ -102,6 +110,8 @@ class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
           errorText: _errorText,
         ),
         obscureText: widget.obscureText,
+        minLines: widget.minLines,
+        maxLines: widget.maxLines,
       ),
       actions: [
         DialogButton(
