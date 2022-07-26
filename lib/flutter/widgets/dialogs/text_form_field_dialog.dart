@@ -13,6 +13,7 @@ Future<String?> showTextFormFieldDialog({
   String? errorText,
   int? minLines,
   int? maxLines = 1,
+  TextCapitalization textCapitalization = TextCapitalization.none,
 }) async {
   assert(validator == null || errorText != null);
 
@@ -31,6 +32,7 @@ Future<String?> showTextFormFieldDialog({
         errorText: errorText,
         minLines: minLines,
         maxLines: maxLines,
+        textCapitalization: textCapitalization,
       );
     },
   );
@@ -50,6 +52,7 @@ class _TextFormFieldDialog extends StatefulWidget {
     required this.errorText,
     required this.minLines,
     required this.maxLines,
+    required this.textCapitalization,
   }) : super(key: key);
 
   final String? initialValue;
@@ -63,6 +66,7 @@ class _TextFormFieldDialog extends StatefulWidget {
   final String? errorText;
   final int? minLines;
   final int? maxLines;
+  final TextCapitalization textCapitalization;
 
   @override
   State<_TextFormFieldDialog> createState() => _TextFormFieldDialogState();
@@ -112,6 +116,7 @@ class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
         obscureText: widget.obscureText,
         minLines: widget.minLines,
         maxLines: widget.maxLines,
+        textCapitalization: widget.textCapitalization,
       ),
       actions: [
         DialogButton(
