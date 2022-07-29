@@ -16,6 +16,3 @@ extension DateTimeExtension on DateTime {
   DateTime operator +(Duration duration) => add(duration);
 }
 
-extension DateTimeExtension2 on DateTime {
-  DateTime operator -(Duration duration) => subtract(duration);
-}
