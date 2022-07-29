@@ -12,4 +12,10 @@ extension DateTimeExtension on DateTime {
   bool operator >=(DateTime other) => isAfter(other) || isAtSameMomentAs(other);
 
   bool operator <=(DateTime other) => isBefore(other) || isAtSameMomentAs(other);
+
+  DateTime operator +(Duration duration) => add(duration);
+}
+
+extension DateTimeExtension2 on DateTime {
+  DateTime operator -(Duration duration) => subtract(duration);
 }
