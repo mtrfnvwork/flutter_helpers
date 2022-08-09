@@ -26,7 +26,6 @@ part 'package:flutter_helpers/flutter/widgets/page_container.dart';
 part 'package:flutter_helpers/flutter/widgets/radio_button.dart';
 part 'package:flutter_helpers/flutter/widgets/tap_detector.dart';
 part 'package:flutter_helpers/flutter/widgets/w.dart';
-
 part 'package:flutter_helpers/widget_settings.dart';
 
 class FlutterHelpers {
@@ -62,5 +61,13 @@ class FlutterHelpers {
   }) {
     _SnackBarSettings.backgroundColor = backgroundColor;
     _SnackBarSettings.textStyle = textStyle;
+  }
+
+  static void changeTapDetectorSettings({
+    TextStyle? textStyle,
+    EdgeInsets padding = EdgeInsets.zero,
+  }) {
+    _TextTapDetectorSettings.textStyle = textStyle;
+    _TextTapDetectorSettings.padding = padding;
   }
 }
