@@ -3,7 +3,6 @@ library flutter_helpers;
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_helpers/widget_settings.dart';
 import 'package:intl/intl.dart';
 
 part 'package:flutter_helpers/dart/extensions/date_time_extension.dart';
@@ -27,7 +26,8 @@ part 'package:flutter_helpers/flutter/widgets/page_container.dart';
 part 'package:flutter_helpers/flutter/widgets/radio_button.dart';
 part 'package:flutter_helpers/flutter/widgets/tap_detector.dart';
 part 'package:flutter_helpers/flutter/widgets/w.dart';
-// part 'package:flutter_helpers/widget_settings.dart';
+
+part 'package:flutter_helpers/widget_settings.dart';
 
 class FlutterHelpers {
   static void changeYesNoDialogSettings({
@@ -35,11 +35,11 @@ class FlutterHelpers {
     String? yesButtonText,
   }) {
     if (noButtonText != null) {
-      YesNoDialogDialogSettings.noButtonText = noButtonText;
+      _YesNoDialogDialogSettings.noButtonText = noButtonText;
     }
 
     if (yesButtonText != null) {
-      YesNoDialogDialogSettings.yesButtonText = yesButtonText;
+      _YesNoDialogDialogSettings.yesButtonText = yesButtonText;
     }
   }
 
@@ -48,11 +48,11 @@ class FlutterHelpers {
     String? confirmButtonText,
   }) {
     if (cancelButtonText != null) {
-      TextFormFieldDialogSettings.cancelButtonText = cancelButtonText;
+      _TextFormFieldDialogSettings.cancelButtonText = cancelButtonText;
     }
 
     if (confirmButtonText != null) {
-      TextFormFieldDialogSettings.confirmButtonText = confirmButtonText;
+      _TextFormFieldDialogSettings.confirmButtonText = confirmButtonText;
     }
   }
 
@@ -60,7 +60,7 @@ class FlutterHelpers {
     Color? backgroundColor,
     TextStyle? textStyle,
   }) {
-    SnackBarSettings.backgroundColor = backgroundColor;
-    SnackBarSettings.textStyle = textStyle;
+    _SnackBarSettings.backgroundColor = backgroundColor;
+    _SnackBarSettings.textStyle = textStyle;
   }
 }

@@ -8,10 +8,10 @@ void showSnackBar(
     ..hideCurrentSnackBar()
     ..showSnackBar(
       SnackBar(
-        backgroundColor: SnackBarSettings.backgroundColor,
+        backgroundColor: _SnackBarSettings.backgroundColor,
         content: Text(
           text,
-          style: SnackBarSettings.textStyle,
+          style: _SnackBarSettings.textStyle,
         ),
       ),
     );

@@ -37,12 +37,12 @@ class TapDetector extends StatelessWidget {
     VoidCallback? onDoubleTap,
   }) {
     return TapDetector(
-      padding: padding ?? TextTapDetectorSettings.padding,
+      padding: padding ?? _TextTapDetectorSettings.padding,
       onTap: onTap,
       onDoubleTap: onDoubleTap,
       child: Text(
         text,
-        style: style ?? TextTapDetectorSettings.textStyle,
+        style: style ?? _TextTapDetectorSettings.textStyle,
       ),
     );
   }

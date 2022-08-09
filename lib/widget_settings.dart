@@ -1,23 +1,21 @@
-// part of 'package:flutter_helpers/flutter_helpers.dart';
+part of 'package:flutter_helpers/flutter_helpers.dart';
 
-import 'package:flutter/material.dart';
-
-class YesNoDialogDialogSettings {
+class _YesNoDialogDialogSettings {
   static String noButtonText = 'Нет';
   static String yesButtonText = 'Да';
 }
 
-class TextFormFieldDialogSettings {
+class _TextFormFieldDialogSettings {
   static String cancelButtonText = 'Отмена';
   static String confirmButtonText = 'Подтвердить';
 }
 
-class SnackBarSettings {
+class _SnackBarSettings {
   static Color? backgroundColor;
   static TextStyle? textStyle;
 }
 
-class TextTapDetectorSettings {
+class _TextTapDetectorSettings {
   static TextStyle? textStyle;
   static EdgeInsets padding = EdgeInsets.zero;
 }

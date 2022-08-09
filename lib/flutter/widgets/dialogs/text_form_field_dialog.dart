@@ -120,11 +120,11 @@ class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
       ),
       actions: [
         DialogButton(
-          text: widget.cancelButtonText ?? TextFormFieldDialogSettings.cancelButtonText,
+          text: widget.cancelButtonText ?? _TextFormFieldDialogSettings.cancelButtonText,
           onPressed: () => pop(context),
         ),
         DialogButton(
-          text: widget.confirmButtonText ?? TextFormFieldDialogSettings.confirmButtonText,
+          text: widget.confirmButtonText ?? _TextFormFieldDialogSettings.confirmButtonText,
           onPressed: _onConfirmPressed,
         ),
       ],
