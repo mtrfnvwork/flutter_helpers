@@ -59,15 +59,24 @@ class FlutterHelpers {
     Color? backgroundColor,
     TextStyle? textStyle,
   }) {
-    _SnackBarSettings.backgroundColor = backgroundColor;
-    _SnackBarSettings.textStyle = textStyle;
+    if (backgroundColor != null) {
+      _SnackBarSettings.backgroundColor = backgroundColor;
+    }
+
+    if (textStyle != null) {
+      _SnackBarSettings.textStyle = textStyle;
+    }
   }
 
   static void changeTapDetectorSettings({
     TextStyle? textStyle,
-    EdgeInsets padding = EdgeInsets.zero,
+    EdgeInsets? padding,
   }) {
-    _TextTapDetectorSettings.textStyle = textStyle;
-    _TextTapDetectorSettings.padding = padding;
+    if (textStyle != null) {
+      _TextTapDetectorSettings.textStyle = textStyle;
+    }
+    if (padding != null) {
+      _TextTapDetectorSettings.padding = padding;
+    }
   }
 }
