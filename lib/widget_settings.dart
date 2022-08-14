@@ -19,3 +19,8 @@ class _TextTapDetectorSettings {
   static TextStyle? textStyle;
   static EdgeInsets padding = EdgeInsets.zero;
 }
+
+class _CenterTextSettings {
+  static EdgeInsets padding = EdgeInsets.zero;
+  static TextStyle? textStyle;
+}

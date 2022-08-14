@@ -75,8 +75,22 @@ class FlutterHelpers {
     if (textStyle != null) {
       _TextTapDetectorSettings.textStyle = textStyle;
     }
+
     if (padding != null) {
       _TextTapDetectorSettings.padding = padding;
+    }
+  }
+
+  static void changeCenterTextSettings({
+    EdgeInsets? padding,
+    TextStyle? textStyle,
+  }) {
+    if (padding != null) {
+      _TextTapDetectorSettings.padding = padding;
+    }
+
+    if (textStyle != null) {
+      _TextTapDetectorSettings.textStyle = textStyle;
     }
   }
 }

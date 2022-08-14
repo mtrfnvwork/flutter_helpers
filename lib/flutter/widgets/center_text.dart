@@ -4,22 +4,22 @@ class CenterText extends StatelessWidget {
   const CenterText({
     Key? key,
     required this.text,
-    this.padding = EdgeInsets.zero,
+    this.padding,
     this.style,
   }) : super(key: key);
 
   final String text;
-  final EdgeInsets padding;
+  final EdgeInsets? padding;
   final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: padding,
+        padding: padding ?? _CenterTextSettings.padding,
         child: Text(
           text,
-          style: style,
+          style: style ?? _CenterTextSettings.textStyle,
           textAlign: TextAlign.center,
         ),
       ),
