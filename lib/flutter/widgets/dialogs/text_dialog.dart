@@ -1,9 +1,9 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
-Future<void> showTextDialog({
-  required BuildContext context,
+Future<void> showTextDialog(
+  BuildContext context,
+  String text, {
   String? title,
-  required String text,
   String okText = 'ОК',
 }) async {
   await showDialog(

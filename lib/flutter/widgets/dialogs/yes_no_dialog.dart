@@ -1,8 +1,8 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
-Future<bool> showYesNoDialog({
-  required BuildContext context,
-  required String text,
+Future<bool> showYesNoDialog(
+  BuildContext context,
+  String text, {
   String? noButtonText,
   String? yesButtonText,
 }) async {

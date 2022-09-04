@@ -1,7 +1,7 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
-Future<String?> showTextFormFieldDialog({
-  required BuildContext context,
+Future<String?> showTextFormFieldDialog(
+  BuildContext context, {
   String? initialValue,
   String? noButtonText,
   String? yesButtonText,
