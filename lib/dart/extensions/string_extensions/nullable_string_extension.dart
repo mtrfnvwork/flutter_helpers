@@ -5,10 +5,3 @@ extension NullableStringExtension on String? {
 
   bool get isNotNullOrEmpty => this?.isNotEmpty == true;
 }
-
-extension StringExtension on String {
-  String capitalizeFirst() {
-    assert(isNotEmpty);
-    return '${this[0].toUpperCase()}${substring(1)}';
-  }
-}
