@@ -6,9 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 part 'package:flutter_helpers/dart/extensions/date_time_extension.dart';
-
 part 'package:flutter_helpers/dart/extensions/double_extension.dart';
-
 part 'package:flutter_helpers/dart/extensions/int_to_duration_extension.dart';
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/date_time_iterable_extension.dart';
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/iterable_extension.dart';
@@ -18,6 +16,9 @@ part 'package:flutter_helpers/dart/extensions/string_extensions/nullable_string_
 part 'package:flutter_helpers/dart/extensions/string_extensions/string_extension.dart';
 part 'package:flutter_helpers/dart/extensions/time_of_day_extension.dart';
 part 'package:flutter_helpers/flutter/helpers/focus_helper.dart';
+
+part 'package:flutter_helpers/flutter/helpers/media_query_helper.dart';
+
 part 'package:flutter_helpers/flutter/helpers/navigator_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/parsers.dart';
 part 'package:flutter_helpers/flutter/helpers/state_helper.dart';
