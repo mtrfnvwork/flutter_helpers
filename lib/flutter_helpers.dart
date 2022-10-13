@@ -5,6 +5,8 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+part 'package:flutter_helpers/dart/extensions/bool_extension.dart';
+
 part 'package:flutter_helpers/dart/extensions/date_time_extension.dart';
 part 'package:flutter_helpers/dart/extensions/double_extension.dart';
 part 'package:flutter_helpers/dart/extensions/int_to_duration_extension.dart';
@@ -15,9 +17,7 @@ part 'package:flutter_helpers/dart/extensions/num_extension.dart';
 part 'package:flutter_helpers/dart/extensions/string_extensions/nullable_string_extension.dart';
 part 'package:flutter_helpers/dart/extensions/string_extensions/string_extension.dart';
 part 'package:flutter_helpers/dart/extensions/time_of_day_extension.dart';
-
 part 'package:flutter_helpers/dart/typedefs.dart';
-
 part 'package:flutter_helpers/flutter/helpers/focus_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/media_query_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/navigator_helper.dart';
