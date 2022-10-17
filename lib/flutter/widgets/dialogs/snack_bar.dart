@@ -5,10 +5,10 @@ void showSnackBar(BuildContext context, String text) {
     ..hideCurrentSnackBar()
     ..showSnackBar(
       SnackBar(
-        backgroundColor: _SnackBarSettings.backgroundColor,
+        backgroundColor: WidgetConfiguration.snackBarConfiguration.backgroundColor,
         content: Text(
           text,
-          style: _SnackBarSettings.textStyle,
+          style: WidgetConfiguration.snackBarConfiguration.textStyle,
         ),
       ),
     );

@@ -6,17 +6,18 @@ Future<bool> showYesNoDialog(
   String? noButtonText,
   String? yesButtonText,
 }) async {
-  return await showDialog(
-        context: context,
-        builder: (context) {
-          return _YesNoDialog(
-            text: text,
-            noButtonText: noButtonText,
-            yesButtonText: yesButtonText,
-          );
-        },
-      ) ??
-      false;
+  var result = await showDialog(
+    context: context,
+    builder: (context) {
+      return _YesNoDialog(
+        text: text,
+        noButtonText: noButtonText,
+        yesButtonText: yesButtonText,
+      );
+    },
+  );
+
+  return result ?? false;
 }
 
 class _YesNoDialog extends StatelessWidget {
@@ -37,11 +38,11 @@ class _YesNoDialog extends StatelessWidget {
       content: Text(text),
       actions: [
         DialogButton(
-          text: noButtonText ?? _YesNoDialogDialogSettings.noButtonText,
+          text: noButtonText ?? WidgetConfiguration.yesNoDialogConfiguration.noButtonText,
           onPressed: () => pop(context),
         ),
         DialogButton(
-          text: yesButtonText ?? _YesNoDialogDialogSettings.yesButtonText,
+          text: yesButtonText ?? WidgetConfiguration.yesNoDialogConfiguration.yesButtonText,
           onPressed: () => pop(context, true),
         ),
       ],

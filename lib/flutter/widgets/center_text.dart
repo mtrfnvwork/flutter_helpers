@@ -16,10 +16,10 @@ class CenterText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: padding ?? _CenterTextSettings.padding,
+        padding: padding ?? WidgetConfiguration.centerTextConfiguration.padding,
         child: Text(
           text,
-          style: style ?? _CenterTextSettings.textStyle,
+          style: style ?? WidgetConfiguration.centerTextConfiguration.textStyle,
           textAlign: TextAlign.center,
         ),
       ),

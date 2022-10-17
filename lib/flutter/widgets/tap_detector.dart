@@ -37,12 +37,12 @@ class TapDetector extends StatelessWidget {
     VoidCallback? onDoubleTap,
   }) {
     return TapDetector(
-      padding: padding ?? _TextTapDetectorSettings.padding,
+      padding: padding ?? WidgetConfiguration.tapDetectorConfiguration.padding,
       onTap: onTap,
       onDoubleTap: onDoubleTap,
       child: Text(
         text,
-        style: style ?? _TextTapDetectorSettings.textStyle,
+        style: style ?? WidgetConfiguration.tapDetectorConfiguration.textStyle,
       ),
     );
   }
@@ -56,12 +56,14 @@ class TapDetector extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget body;
 
-    body = padding == EdgeInsets.zero
-        ? child
-        : Padding(
-            padding: padding,
-            child: child,
-          );
+    if (padding == EdgeInsets.zero) {
+      body = child;
+    } else {
+      body = Padding(
+        padding: padding,
+        child: child,
+      );
+    }
 
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
