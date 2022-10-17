@@ -29,7 +29,7 @@ class CheckBoxButton extends StatelessWidget {
               ),
             ),
           ),
-          const W(16),
+          W(WidgetConfiguration.checkBoxButtonConfiguration.spacing),
           Expanded(
             child: Text(
               title,
