@@ -23,9 +23,7 @@ part 'package:flutter_helpers/flutter/helpers/navigator_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/parsers.dart';
 part 'package:flutter_helpers/flutter/helpers/state_helper.dart';
 part 'package:flutter_helpers/flutter/models/center_text_configuration.dart';
-
 part 'package:flutter_helpers/flutter/models/check_box_button_configuration.dart';
-
 part 'package:flutter_helpers/flutter/models/radio_button_configuration.dart';
 part 'package:flutter_helpers/flutter/models/snack_bar_configuration.dart';
 part 'package:flutter_helpers/flutter/models/tap_detector_configuration.dart';
