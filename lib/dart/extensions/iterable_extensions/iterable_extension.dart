@@ -81,4 +81,9 @@ extension IterableExtension<T, K extends num, V, D extends DateTime> on Iterable
 
     return result.values;
   }
+
+  T random() {
+    assert(isNotEmpty);
+    return elementAt(math.Random.secure().nextInt(length));
+  }
 }
