@@ -11,10 +11,11 @@ part 'package:flutter_helpers/dart/extensions/double_extension.dart';
 part 'package:flutter_helpers/dart/extensions/int_to_duration_extension.dart';
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/date_time_iterable_extension.dart';
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/iterable_extension.dart';
-
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/nullable_iterable_extension.dart';
-
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/numeric_iterable_extension.dart';
+
+part 'package:flutter_helpers/dart/extensions/map_extensions/nullable_map_extension.dart';
+
 part 'package:flutter_helpers/dart/extensions/num_extension.dart';
 part 'package:flutter_helpers/dart/extensions/string_extensions/nullable_string_extension.dart';
 part 'package:flutter_helpers/dart/extensions/string_extensions/string_extension.dart';
