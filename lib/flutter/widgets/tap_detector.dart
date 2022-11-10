@@ -65,11 +65,14 @@ class TapDetector extends StatelessWidget {
       );
     }
 
-    return GestureDetector(
-      behavior: HitTestBehavior.translucent,
-      onTap: onTap,
-      onDoubleTap: onDoubleTap,
-      child: body,
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        behavior: HitTestBehavior.translucent,
+        onTap: onTap,
+        onDoubleTap: onDoubleTap,
+        child: body,
+      ),
     );
   }
 }
