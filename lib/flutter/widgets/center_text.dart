@@ -5,18 +5,21 @@ class CenterText extends StatelessWidget {
     Key? key,
     required this.text,
     this.padding,
+    this.margin,
     this.style,
   }) : super(key: key);
 
   final String text;
   final EdgeInsets? padding;
+  final EdgeInsets? margin;
   final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Padding(
+      child: Container(
         padding: padding ?? WidgetConfiguration.centerTextConfiguration.padding,
+        margin: margin ?? WidgetConfiguration.centerTextConfiguration.margin,
         child: Text(
           text,
           style: style ?? WidgetConfiguration.centerTextConfiguration.textStyle,
