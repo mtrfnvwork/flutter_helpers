@@ -5,7 +5,7 @@ class HiddenWidget extends StatelessWidget {
     Key? key,
     required this.hide,
     required this.child,
-    this.animationDuration = const Duration(milliseconds: 150),
+    this.animationDuration = const Duration(milliseconds: 100),
   }) : super(key: key);
 
   final bool hide;
