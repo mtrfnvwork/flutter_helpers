@@ -5,9 +5,9 @@ Future<T?> push<T extends Object?>(
   Widget page, {
   bool fullscreenDialog = false,
 }) {
-  return Navigator.push(
+  return Navigator.push<T>(
     context,
-    MaterialPageRoute(
+    MaterialPageRoute<T>(
       builder: (context) => page,
       fullscreenDialog: fullscreenDialog,
     ),
@@ -22,7 +22,7 @@ Future<T?> pushReplacement<T extends Object?, TO extends Object?>(
 }) {
   return Navigator.pushReplacement<T, TO>(
     context,
-    MaterialPageRoute(
+    MaterialPageRoute<T>(
       builder: (context) => page,
       fullscreenDialog: fullscreenDialog,
     ),
@@ -38,7 +38,7 @@ Future<T?> pushAndRemoveUntil<T extends Object?>(
 }) {
   return Navigator.pushAndRemoveUntil<T>(
     context,
-    MaterialPageRoute(
+    MaterialPageRoute<T>(
       builder: (context) => page,
       fullscreenDialog: fullscreenDialog,
     ),
