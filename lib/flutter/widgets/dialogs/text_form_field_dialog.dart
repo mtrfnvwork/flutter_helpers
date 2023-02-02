@@ -3,8 +3,8 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 Future<String?> showTextFormFieldDialog(
   BuildContext context, {
   String? initialValue,
-  String? noButtonText,
-  String? yesButtonText,
+  String? cancelButtonText,
+  String? confirmButtonText,
   String? title,
   String? hintText,
   String? labelText,
@@ -22,8 +22,8 @@ Future<String?> showTextFormFieldDialog(
     builder: (dialogContext) {
       return _TextFormFieldDialog(
         initialValue: initialValue,
-        cancelButtonText: noButtonText,
-        confirmButtonText: yesButtonText,
+        cancelButtonText: cancelButtonText,
+        confirmButtonText: confirmButtonText,
         title: title,
         hintText: hintText,
         labelText: labelText,
@@ -103,20 +103,29 @@ class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
 
   @override
   Widget build(BuildContext context) {
+    const horizontalPadding = 16.0;
+
     return AlertDialog(
       title: widget.title != null ? Text(widget.title!) : null,
-      content: TextFormField(
-        autofocus: true,
-        controller: _controller,
-        decoration: InputDecoration(
-          hintText: widget.hintText,
-          labelText: widget.labelText,
-          errorText: _errorText,
+      insetPadding: const EdgeInsets.symmetric(
+        horizontal: horizontalPadding,
+        vertical: 16,
+      ),
+      content: SizedBox(
+        width: getScreenWidth(context) - horizontalPadding * 2,
+        child: TextFormField(
+          autofocus: true,
+          controller: _controller,
+          decoration: InputDecoration(
+            hintText: widget.hintText,
+            labelText: widget.labelText,
+            errorText: _errorText,
+          ),
+          obscureText: widget.obscureText,
+          minLines: widget.minLines,
+          maxLines: widget.maxLines,
+          textCapitalization: widget.textCapitalization,
         ),
-        obscureText: widget.obscureText,
-        minLines: widget.minLines,
-        maxLines: widget.maxLines,
-        textCapitalization: widget.textCapitalization,
       ),
       actions: [
         DialogButton(
