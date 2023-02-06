@@ -1,9 +1,9 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
 class CenterText extends StatelessWidget {
-  const CenterText({
+  const CenterText(
+    this.text, {
     Key? key,
-    required this.text,
     this.padding,
     this.margin,
     this.style,
