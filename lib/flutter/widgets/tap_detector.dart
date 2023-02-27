@@ -3,24 +3,24 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 class TapDetector extends StatelessWidget {
   const TapDetector({
     Key? key,
-    required this.child,
-    this.padding = EdgeInsets.zero,
     required this.onTap,
     this.onDoubleTap,
+    required this.child,
+    this.padding = EdgeInsets.zero,
   }) : super(key: key);
 
   factory TapDetector.icon({
+    required VoidCallback? onTap,
+    VoidCallback? onDoubleTap,
     required IconData data,
     Color? color,
     double? size,
     EdgeInsets padding = EdgeInsets.zero,
-    required VoidCallback? onTap,
-    VoidCallback? onDoubleTap,
   }) {
     return TapDetector(
-      padding: padding,
       onTap: onTap,
       onDoubleTap: onDoubleTap,
+      padding: padding,
       child: Icon(
         data,
         color: color,
@@ -30,16 +30,16 @@ class TapDetector extends StatelessWidget {
   }
 
   factory TapDetector.text({
+    required VoidCallback? onTap,
+    VoidCallback? onDoubleTap,
     required String text,
     TextStyle? style,
     EdgeInsets? padding,
-    required VoidCallback? onTap,
-    VoidCallback? onDoubleTap,
   }) {
     return TapDetector(
-      padding: padding ?? WidgetConfiguration.tapDetectorConfiguration.padding,
       onTap: onTap,
       onDoubleTap: onDoubleTap,
+      padding: padding ?? WidgetConfiguration.tapDetectorConfiguration.padding,
       child: Text(
         text,
         style: style ?? WidgetConfiguration.tapDetectorConfiguration.textStyle,
@@ -47,10 +47,10 @@ class TapDetector extends StatelessWidget {
     );
   }
 
-  final Widget child;
-  final EdgeInsets padding;
   final VoidCallback? onTap;
   final VoidCallback? onDoubleTap;
+  final Widget child;
+  final EdgeInsets padding;
 
   @override
   Widget build(BuildContext context) {

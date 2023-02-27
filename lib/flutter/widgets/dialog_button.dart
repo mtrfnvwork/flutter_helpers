@@ -3,13 +3,13 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 class DialogButton extends StatelessWidget {
   const DialogButton({
     Key? key,
-    required this.text,
     required this.onPressed,
+    required this.text,
     this.color,
   }) : super(key: key);
 
-  final String text;
   final VoidCallback onPressed;
+  final String text;
   final Color? color;
 
   @override
