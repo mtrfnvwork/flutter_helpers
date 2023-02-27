@@ -8,6 +8,7 @@ class CheckBoxButton extends StatelessWidget {
     this.child,
     required this.onChanged,
     this.textStyle,
+    this.expands = true,
   })  : assert([title, child].count((x) => x != null) <= 1),
         super(key: key);
 
@@ -16,45 +17,50 @@ class CheckBoxButton extends StatelessWidget {
   final Widget? child;
   final ValueChanged<bool> onChanged;
   final TextStyle? textStyle;
+  final bool expands;
 
   @override
   Widget build(BuildContext context) {
     var hasChild = title != null || child != null;
+    var childrenAfterCheckbox = <Widget>[];
+
+    if (hasChild) {
+      Widget? ch;
+
+      if (title != null) {
+        ch = Text(
+          title!,
+          style: textStyle,
+        );
+      } else if (child != null) {
+        ch = child;
+      }
+
+      if (ch != null) {
+        childrenAfterCheckbox.add(W(WidgetConfiguration.checkBoxButtonConfiguration.spacing));
+
+        if (expands) {
+          childrenAfterCheckbox.add(Expanded(child: ch));
+        } else {
+          childrenAfterCheckbox.add(ch);
+        }
+      }
+    }
 
     return TapDetector(
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           IgnorePointer(
-            child: SizedBox(
-              width: 24,
-              height: 24,
+            child: SizedBox.square(
+              dimension: 24,
               child: Checkbox(
                 value: value,
                 onChanged: (value) {},
               ),
             ),
           ),
-          if (hasChild) ...[
-            W(WidgetConfiguration.checkBoxButtonConfiguration.spacing),
-            Expanded(
-              child: Builder(
-                builder: (context) {
-                  if (title != null) {
-                    return Text(
-                      title!,
-                      style: textStyle,
-                    );
-                  }
-
-                  if (child != null) {
-                    return child!;
-                  }
-
-                  return const SizedBox();
-                },
-              ),
-            ),
-          ],
+          ...childrenAfterCheckbox,
         ],
       ),
       onTap: () => onChanged(!value),
