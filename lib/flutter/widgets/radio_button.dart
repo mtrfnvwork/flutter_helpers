@@ -29,6 +29,7 @@ class RadioButton<T> extends StatelessWidget {
       onTap: () => onChanged(value),
       child: Row(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           IgnorePointer(
             child: SizedBox(
