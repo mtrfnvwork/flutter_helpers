@@ -22,19 +22,15 @@ class RadioButton<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     const size = 24.0;
 
-    var text = ConstrainedBox(
-      constraints: const BoxConstraints(minHeight: size),
-      child: Text(
-        title,
-        style: textStyle,
-      ),
+    var text = Text(
+      title,
+      style: textStyle,
     );
 
     return TapDetector(
       onTap: () => onChanged(value),
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           IgnorePointer(
             child: SizedBox.square(
