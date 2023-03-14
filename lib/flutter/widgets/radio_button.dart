@@ -3,22 +3,30 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 class RadioButton<T> extends StatelessWidget {
   const RadioButton({
     Key? key,
-    required this.title,
+    required this.onChanged,
     required this.value,
     required this.groupValue,
-    required this.onChanged,
+    required this.title,
     this.textStyle,
+    this.expands = false,
   }) : super(key: key);
 
-  final String title;
+  final ValueChanged<T> onChanged;
   final T value;
   final T groupValue;
-  final ValueChanged<T> onChanged;
+  final String title;
   final TextStyle? textStyle;
+  final bool expands;
 
   @override
   Widget build(BuildContext context) {
+    var text = Text(
+      title,
+      style: textStyle,
+    );
+
     return TapDetector(
+      onTap: () => onChanged(value),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -34,13 +42,9 @@ class RadioButton<T> extends StatelessWidget {
             ),
           ),
           W(WidgetConfiguration.radioButtonConfiguration.spacing),
-          Text(
-            title,
-            style: textStyle,
-          ),
+          if (expands) Expanded(child: text) else text,
         ],
       ),
-      onTap: () => onChanged(value),
     );
   }
 }
