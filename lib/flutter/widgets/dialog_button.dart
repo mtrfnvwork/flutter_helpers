@@ -14,12 +14,14 @@ class DialogButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      style: TextButton.styleFrom(
-        primary: color,
+    return SelectionContainer.disabled(
+      child: TextButton(
+        style: TextButton.styleFrom(
+          primary: color,
+        ),
+        onPressed: onPressed,
+        child: Text(text),
       ),
-      onPressed: onPressed,
-      child: Text(text),
     );
   }
 }
