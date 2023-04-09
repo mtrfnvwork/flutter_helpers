@@ -8,6 +8,8 @@ class CenterText extends StatelessWidget {
     this.margin,
     this.style,
     this.constraints,
+    this.maxLines,
+    this.overflow,
   }) : super(key: key);
 
   final String text;
@@ -15,6 +17,8 @@ class CenterText extends StatelessWidget {
   final EdgeInsets? margin;
   final TextStyle? style;
   final BoxConstraints? constraints;
+  final int? maxLines;
+  final TextOverflow? overflow;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +30,8 @@ class CenterText extends StatelessWidget {
           text,
           style: style ?? WidgetConfiguration.centerTextConfiguration.textStyle,
           textAlign: TextAlign.center,
+          maxLines: maxLines,
+          overflow: overflow,
         ),
       ),
     );
