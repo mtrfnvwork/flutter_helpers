@@ -8,7 +8,7 @@ class DialogButton extends StatelessWidget {
     this.color,
   }) : super(key: key);
 
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String text;
   final Color? color;
 
