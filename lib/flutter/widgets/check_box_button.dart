@@ -9,6 +9,7 @@ class CheckBoxButton extends StatelessWidget {
     required this.onChanged,
     this.textStyle,
     this.expands = true,
+    this.crossAxisAlignment = CrossAxisAlignment.center,
   })  : assert([title, child].count((x) => x != null) <= 1),
         super(key: key);
 
@@ -18,6 +19,7 @@ class CheckBoxButton extends StatelessWidget {
   final ValueChanged<bool> onChanged;
   final TextStyle? textStyle;
   final bool expands;
+  final CrossAxisAlignment crossAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +52,7 @@ class CheckBoxButton extends StatelessWidget {
     return TapDetector(
       child: Row(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: crossAxisAlignment,
         children: [
           IgnorePointer(
             child: SizedBox.square(
