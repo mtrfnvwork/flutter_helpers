@@ -11,6 +11,9 @@ part 'package:flutter_helpers/dart/extensions/double_extension.dart';
 part 'package:flutter_helpers/dart/extensions/int_to_duration_extension.dart';
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/date_time_iterable_extension.dart';
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/iterable_extension.dart';
+
+part 'package:flutter_helpers/dart/extensions/iterable_extensions/iterable_with_nullable_items_extension.dart';
+
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/nullable_iterable_extension.dart';
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/numeric_iterable_extension.dart';
 part 'package:flutter_helpers/dart/extensions/map_extensions/nullable_map_extension.dart';
@@ -24,9 +27,7 @@ part 'package:flutter_helpers/flutter/helpers/media_query_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/navigator_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/parsers.dart';
 part 'package:flutter_helpers/flutter/helpers/state_helper.dart';
-
 part 'package:flutter_helpers/flutter/helpers/theme_helper.dart';
-
 part 'package:flutter_helpers/flutter/models/center_text_configuration.dart';
 part 'package:flutter_helpers/flutter/models/check_box_button_configuration.dart';
 part 'package:flutter_helpers/flutter/models/radio_button_configuration.dart';
