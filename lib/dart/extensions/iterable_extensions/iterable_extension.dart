@@ -86,4 +86,6 @@ extension IterableExtension<T, K extends num, V, D extends DateTime> on Iterable
     assert(isNotEmpty);
     return elementAt(math.Random.secure().nextInt(length));
   }
+
+  Iterable<T> selectNotNullable() => where((e) => e != null).map((e) => e!);
 }
