@@ -86,4 +86,17 @@ extension IterableExtension<T, K extends num, V, D extends DateTime> on Iterable
     assert(isNotEmpty);
     return elementAt(math.Random.secure().nextInt(length));
   }
+
+  Iterable<T> separated(T separator) {
+    if (isEmpty) {
+      return Iterable<T>.empty();
+    }
+
+    return [
+      for (var i = 0; i < length; i++) ...[
+        if (i > 0) separator,
+        elementAt(i),
+      ],
+    ];
+  }
 }
