@@ -125,6 +125,7 @@ class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
           minLines: widget.minLines,
           maxLines: widget.maxLines,
           textCapitalization: widget.textCapitalization,
+          onFieldSubmitted: (value) => _onConfirmPressed(),
         ),
       ),
       actions: [
