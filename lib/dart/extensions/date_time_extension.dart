@@ -3,6 +3,8 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 extension DateTimeExtension on DateTime {
   String format([String? newPattern, String? locale]) => DateFormat(newPattern, locale).format(this);
 
+  DateTime get date => DateUtils.dateOnly(this);
+
   Duration operator -(DateTime other) => difference(other);
 
   bool operator >(DateTime other) => isAfter(other);
@@ -15,4 +17,3 @@ extension DateTimeExtension on DateTime {
 
   DateTime operator +(Duration duration) => add(duration);
 }
-
