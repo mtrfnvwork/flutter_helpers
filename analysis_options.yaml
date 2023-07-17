@@ -34,3 +34,5 @@ linter:
     - require_trailing_commas
     - avoid_types_on_closure_parameters
     - avoid_bool_literals_in_conditional_expressions
+    - avoid_redundant_argument_values
+    - no_literal_bool_comparisons

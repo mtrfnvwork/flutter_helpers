@@ -17,7 +17,7 @@ class DialogButton extends StatelessWidget {
     return SelectionContainer.disabled(
       child: TextButton(
         style: TextButton.styleFrom(
-          primary: color,
+          foregroundColor: color,
         ),
         onPressed: onPressed,
         child: Text(text),
