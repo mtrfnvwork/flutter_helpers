@@ -1,25 +1,13 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
-Size getScreenSize(BuildContext context) {
-  var result = MediaQuery.of(context).size;
-
+Size get screenSize {
   var view = WidgetsBinding.instance.platformDispatcher.views.first;
-
-  var isTrue = view.physicalSize / view.devicePixelRatio == result;
-
-  log('SCREEN SIZE TEST: $isTrue');
-
-  if (!isTrue) {
-    log('SCREEN SIZE TEST: view.physicalSize / view.devicePixelRatio: ${view.physicalSize / view.devicePixelRatio}');
-    log('SCREEN SIZE TEST: MediaQuery.of(context).size: $result');
-  }
-
-  return result;
+  return view.physicalSize / view.devicePixelRatio;
 }
 
-double getScreenWidth(BuildContext context) => getScreenSize(context).width;
+double get screenWidth => screenSize.width;
 
-double getScreenHeight(BuildContext context) => getScreenSize(context).height;
+double get screenHeight => screenSize.height;
 
 double getTopPadding(BuildContext context) => MediaQuery.of(context).padding.top;
 

@@ -116,7 +116,7 @@ class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
         vertical: 16,
       ),
       content: SizedBox(
-        width: getScreenWidth(context) - horizontalPadding * 2,
+        width: screenWidth - horizontalPadding * 2,
         child: TextFormField(
           autofocus: true,
           controller: _controller,
