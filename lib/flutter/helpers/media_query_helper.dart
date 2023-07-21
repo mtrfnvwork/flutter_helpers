@@ -5,9 +5,14 @@ Size getScreenSize(BuildContext context) {
 
   var view = WidgetsBinding.instance.platformDispatcher.views.first;
 
-  log('SCREEN SIZE TEST: view.physicalSize / view.devicePixelRatio: ${view.physicalSize / view.devicePixelRatio}');
-  log('SCREEN SIZE TEST: MediaQuery.of(context).size: $result');
-  log('SCREEN SIZE TEST: ${view.physicalSize / view.devicePixelRatio == result}');
+  var isTrue = view.physicalSize / view.devicePixelRatio == result;
+
+  log('SCREEN SIZE TEST: $isTrue');
+
+  if (!isTrue) {
+    log('SCREEN SIZE TEST: view.physicalSize / view.devicePixelRatio: ${view.physicalSize / view.devicePixelRatio}');
+    log('SCREEN SIZE TEST: MediaQuery.of(context).size: $result');
+  }
 
   return result;
 }
