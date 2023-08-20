@@ -14,5 +14,7 @@ extension DynamicExtension<T> on dynamic {
     }
   }
 
-  List<T> parseJsonList(T Function(Json json) parser) => (this as List).cast<Json>().map(parser).toList();
+  List<T> parseList(T Function(dynamic x) parser) => (this as List).map(parser).toList();
+
+  List<T> parseJsonList(T Function(Json json) parser) => parseList((x) => parser(x as Json));
 }
