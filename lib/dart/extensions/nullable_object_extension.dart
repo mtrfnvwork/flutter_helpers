@@ -1,6 +1,6 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
-extension DynamicExtension<T> on dynamic {
+extension DynamicExtension<T> on Object? {
   T? tryParse(T Function(Json json) parser) {
     if (this == null) {
       return null;
