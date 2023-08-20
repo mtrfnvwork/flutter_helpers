@@ -15,12 +15,12 @@ part 'package:flutter_helpers/dart/extensions/iterable_extensions/iterable_with_
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/nullable_iterable_extension.dart';
 part 'package:flutter_helpers/dart/extensions/iterable_extensions/numeric_iterable_extension.dart';
 part 'package:flutter_helpers/dart/extensions/map_extensions/nullable_map_extension.dart';
-part 'package:flutter_helpers/dart/extensions/nullable_object_extension.dart';
 part 'package:flutter_helpers/dart/extensions/num_extension.dart';
 part 'package:flutter_helpers/dart/extensions/string_extensions/nullable_string_extension.dart';
 part 'package:flutter_helpers/dart/extensions/string_extensions/string_extension.dart';
 part 'package:flutter_helpers/dart/extensions/time_of_day_extension.dart';
 part 'package:flutter_helpers/dart/typedefs.dart';
+part 'package:flutter_helpers/dart/utils/json_parser.dart';
 part 'package:flutter_helpers/flutter/helpers/focus_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/media_query_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/navigator_helper.dart';
