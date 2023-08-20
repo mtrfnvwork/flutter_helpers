@@ -88,15 +88,15 @@ extension IterableExtension<T, K extends num, V, D extends DateTime> on Iterable
   }
 
   Iterable<T> separated(T separator) {
-    if (isEmpty) {
-      return Iterable<T>.empty();
-    }
-
-    return [
-      for (var i = 0; i < length; i++) ...[
-        if (i > 0) separator,
-        elementAt(i),
-      ],
-    ];
+    return isEmpty
+        ? Iterable<T>.empty()
+        : [
+            for (var i = 0; i < length; i++) ...[
+              if (i > 0) separator,
+              elementAt(i),
+            ],
+          ];
   }
+
+  List<Widget> separatedWidgets(Widget separator) => cast<Widget>().separated(separator).toList();
 }
