@@ -1,5 +1,6 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
+@Deprecated('Не должен использоваться из-за проблем с появлением белой области над клавиатурой')
 class PageContainer extends StatelessWidget {
   const PageContainer({
     Key? key,
