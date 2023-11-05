@@ -76,7 +76,7 @@ class _TextFormFieldDialog extends StatefulWidget {
   State<_TextFormFieldDialog> createState() => _TextFormFieldDialogState();
 }
 
-class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
+class _TextFormFieldDialogState extends State<_TextFormFieldDialog> {
   late TextEditingController _controller;
 
   String? _errorText;
@@ -92,11 +92,16 @@ class _TextFormFieldDialogState extends StateExt<_TextFormFieldDialog> {
 
     if (valid) {
       pop(context, text);
-    } else {
-      ss(() {
-        _errorText = widget.errorText;
-      });
+      return;
     }
+
+    if (!mounted) {
+      return;
+    }
+
+    setState(() {
+      _errorText = widget.errorText;
+    });
   }
 
   @override
