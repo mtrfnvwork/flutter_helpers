@@ -42,7 +42,6 @@ Future<String?> showTextFormFieldDialog(
 
 class _TextFormFieldDialog extends StatefulWidget {
   const _TextFormFieldDialog({
-    Key? key,
     required this.initialValue,
     required this.cancelButtonText,
     required this.confirmButtonText,
@@ -56,7 +55,7 @@ class _TextFormFieldDialog extends StatefulWidget {
     required this.maxLines,
     required this.textCapitalization,
     required this.keyboardType,
-  }) : super(key: key);
+  });
 
   final String? initialValue;
   final String? cancelButtonText;

@@ -2,11 +2,11 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 
 class HiddenWidget extends StatelessWidget {
   const HiddenWidget({
-    Key? key,
+    super.key,
     required this.hide,
     required this.child,
     this.animationDuration = const Duration(milliseconds: 100),
-  }) : super(key: key);
+  });
 
   final bool hide;
   final Widget child;

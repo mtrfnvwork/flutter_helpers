@@ -22,11 +22,10 @@ Future<bool> showYesNoDialog(
 
 class _YesNoDialog extends StatelessWidget {
   const _YesNoDialog({
-    Key? key,
     required this.text,
     required this.noButtonText,
     required this.yesButtonText,
-  }) : super(key: key);
+  });
 
   final String text;
   final String? noButtonText;

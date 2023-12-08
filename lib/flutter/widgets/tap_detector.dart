@@ -2,12 +2,12 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 
 class TapDetector extends StatelessWidget {
   const TapDetector({
-    Key? key,
+    super.key,
     required this.onTap,
     this.onDoubleTap,
     required this.child,
     this.padding = EdgeInsets.zero,
-  }) : super(key: key);
+  });
 
   factory TapDetector.icon({
     required VoidCallback? onTap,

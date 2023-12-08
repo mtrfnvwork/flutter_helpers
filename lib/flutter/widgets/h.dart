@@ -3,8 +3,8 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 class H extends StatelessWidget {
   const H(
     this.value, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final double value;
 

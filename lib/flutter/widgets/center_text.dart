@@ -3,14 +3,14 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 class CenterText extends StatelessWidget {
   const CenterText(
     this.text, {
-    Key? key,
+    super.key,
     this.padding,
     this.margin,
     this.style,
     this.constraints,
     this.maxLines,
     this.overflow,
-  }) : super(key: key);
+  });
 
   final String text;
   final EdgeInsets? padding;

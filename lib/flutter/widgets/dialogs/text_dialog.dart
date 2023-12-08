@@ -18,11 +18,10 @@ Future<void> showTextDialog(
 
 class _TextDialog extends StatelessWidget {
   const _TextDialog({
-    Key? key,
     required this.title,
     required this.text,
     required this.okText,
-  }) : super(key: key);
+  });
 
   final String? title;
   final String text;

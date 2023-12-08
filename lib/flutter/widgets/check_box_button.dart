@@ -2,7 +2,7 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 
 class CheckBoxButton extends StatelessWidget {
   CheckBoxButton({
-    Key? key,
+    super.key,
     required this.value,
     this.title,
     this.child,
@@ -10,8 +10,7 @@ class CheckBoxButton extends StatelessWidget {
     this.textStyle,
     this.expands = true,
     this.crossAxisAlignment = CrossAxisAlignment.center,
-  })  : assert([title, child].count((x) => x != null) <= 1),
-        super(key: key);
+  }) : assert([title, child].count((x) => x != null) <= 1);
 
   final bool value;
   final String? title;

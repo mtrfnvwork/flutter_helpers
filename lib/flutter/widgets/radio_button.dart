@@ -2,14 +2,14 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 
 class RadioButton<T> extends StatelessWidget {
   const RadioButton({
-    Key? key,
+    super.key,
     required this.onChanged,
     required this.value,
     required this.groupValue,
     required this.title,
     this.textStyle,
     this.expands = false,
-  }) : super(key: key);
+  });
 
   final ValueChanged<T> onChanged;
   final T value;
