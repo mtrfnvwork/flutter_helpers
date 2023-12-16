@@ -4,7 +4,7 @@ extension DoubleExtension on double {
   String trim({
     int? precision,
   }) {
-    var str = precision == null ? toString() : toStringAsFixed(2);
+    var str = toStringAsFixed(precision ?? 20);
 
     if (str.contains('.')) {
       while (str.endsWith('0')) {
