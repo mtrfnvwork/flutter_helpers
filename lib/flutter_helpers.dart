@@ -31,6 +31,7 @@ part 'package:flutter_helpers/flutter/models/check_box_button_configuration.dart
 part 'package:flutter_helpers/flutter/models/radio_button_configuration.dart';
 part 'package:flutter_helpers/flutter/models/snack_bar_configuration.dart';
 part 'package:flutter_helpers/flutter/models/tap_detector_configuration.dart';
+part 'package:flutter_helpers/flutter/models/text_editing_kit.dart';
 part 'package:flutter_helpers/flutter/models/text_form_field_dialog_configuration.dart';
 part 'package:flutter_helpers/flutter/models/yes_no_dialog_configuration.dart';
 part 'package:flutter_helpers/flutter/widget_configuration.dart';
