@@ -11,6 +11,10 @@ class TextEditingKit {
   final TextEditingController controller;
   final FocusNode focusNode;
 
+  String get text => controller.text;
+
+  void requestFocus() => focusNode.requestFocus();
+
   void dispose() {
     controller.dispose();
     focusNode.dispose();
