@@ -2,7 +2,8 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 
 extension DoubleExtension on double {
   @Deprecated(
-      'Не дает адекватных результатов из-за преобразования в экспоненциальную форму при большом количестве знаков после запятой')
+    'Не дает адекватных результатов из-за преобразования в экспоненциальную форму при большом количестве знаков после запятой',
+  )
   String trim({
     int? precision,
   }) {
