@@ -2,10 +2,11 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 
 @immutable
 class TextEditingKit {
-  const TextEditingKit({
-    required this.controller,
-    required this.focusNode,
-  });
+  TextEditingKit({
+    TextEditingController? controller,
+    FocusNode? focusNode,
+  })  : controller = controller ?? TextEditingController(),
+        focusNode = focusNode ?? FocusNode();
 
   final TextEditingController controller;
   final FocusNode focusNode;
