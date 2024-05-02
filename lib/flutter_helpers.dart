@@ -87,5 +87,4 @@ class FlutterHelpers {
       WidgetConfiguration.centerTextConfiguration.update(centerTextConfiguration);
     }
   }
-
 }
