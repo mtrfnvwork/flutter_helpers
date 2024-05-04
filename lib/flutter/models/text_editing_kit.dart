@@ -20,6 +20,10 @@ class TextEditingKit {
 
   set text(String text) => controller.text = text;
 
+  TextSelection get selection => controller.selection;
+
+  set selection(TextSelection selection) => controller.selection = selection;
+
   void clear() => controller.clear();
 
   bool get hasFocus => focusNode.hasFocus;
