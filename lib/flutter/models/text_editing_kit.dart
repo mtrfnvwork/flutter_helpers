@@ -13,6 +13,8 @@ class TextEditingKit {
 
   String get text => controller.text;
 
+  bool get hasFocus => focusNode.hasFocus;
+
   void requestFocus() => focusNode.requestFocus();
 
   void dispose() {
