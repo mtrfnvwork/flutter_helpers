@@ -5,7 +5,12 @@ class TextEditingKit {
   TextEditingKit({
     TextEditingController? controller,
     FocusNode? focusNode,
-  })  : controller = controller ?? TextEditingController(),
+    String? text,
+  })  : assert(
+          controller == null || text == null,
+          'Если контроллер не равен null, текст должен устанавливаться непосредственно в контроллер, а не передаваться в качестве параметра в данный конструктор',
+        ),
+        controller = controller ?? TextEditingController(text: text),
         focusNode = focusNode ?? FocusNode();
 
   final TextEditingController controller;
