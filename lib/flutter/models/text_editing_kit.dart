@@ -15,6 +15,8 @@ class TextEditingKit {
 
   set text(String text) => controller.text = text;
 
+  void clear() => controller.clear();
+
   bool get hasFocus => focusNode.hasFocus;
 
   void requestFocus() => focusNode.requestFocus();
