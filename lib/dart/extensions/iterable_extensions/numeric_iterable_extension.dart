@@ -15,4 +15,9 @@ extension NumericIterableExtension<T extends num> on Iterable<T> {
     assert(isNotEmpty);
     return (toElement != null ? map(toElement) : this).reduce(math.max);
   }
+
+  double avg([T Function(T x)? toElement]) {
+    assert(isNotEmpty);
+    return (toElement != null ? map(toElement) : this).sum() / length;
+  }
 }

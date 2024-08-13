@@ -56,6 +56,11 @@ extension IterableExtension<T, K extends num, V, D extends DateTime> on Iterable
     return map(toElement).max();
   }
 
+  double avg(K Function(T x) toElement) {
+    assert(isNotEmpty);
+    return map(toElement).avg();
+  }
+
   D minDate(D Function(T x) toElement) {
     assert(isNotEmpty);
     return map(toElement).min();
