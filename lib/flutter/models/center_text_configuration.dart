@@ -9,11 +9,11 @@ class CenterTextConfiguration {
 
   EdgeInsets padding;
   EdgeInsets margin;
-  TextStyle? textStyle;
+  TextStyle? textStyle = WidgetConfiguration.defaultTextStyle;
 
   void update(CenterTextConfiguration value) {
     padding = value.padding;
     margin = value.margin;
-    textStyle = value.textStyle;
+    textStyle = WidgetConfiguration.defaultTextStyle.merge(value.textStyle);
   }
 }

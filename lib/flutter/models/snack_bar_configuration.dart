@@ -7,10 +7,10 @@ class SnackBarConfiguration {
   });
 
   Color? backgroundColor;
-  TextStyle? textStyle;
+  TextStyle? textStyle = WidgetConfiguration.defaultTextStyle;
 
   void update(SnackBarConfiguration value) {
     backgroundColor = value.backgroundColor;
-    textStyle = value.textStyle;
+    textStyle = WidgetConfiguration.defaultTextStyle.merge(value.textStyle);
   }
 }
