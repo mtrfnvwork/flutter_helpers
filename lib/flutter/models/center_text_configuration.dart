@@ -4,19 +4,12 @@ class CenterTextConfiguration {
   CenterTextConfiguration({
     this.padding = EdgeInsets.zero,
     this.margin = EdgeInsets.zero,
-    TextStyle? textStyle,
-  }) : _textStyle = textStyle;
+    this.textStyle,
+  });
 
   EdgeInsets padding;
   EdgeInsets margin;
-
-  TextStyle? _textStyle;
-
-  TextStyle? get textStyle => WidgetConfiguration.defaultTextStyleBuilder.callback(_textStyle);
-
-  set textStyle(TextStyle? value) {
-    _textStyle = value;
-  }
+  TextStyle? textStyle;
 
   void update(CenterTextConfiguration value) {
     padding = value.padding;

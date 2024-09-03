@@ -28,7 +28,8 @@ class CenterText extends StatelessWidget {
         margin: margin ?? WidgetConfiguration.centerTextConfiguration.margin,
         child: Text(
           text,
-          style: style ?? WidgetConfiguration.centerTextConfiguration.textStyle,
+          style: WidgetConfiguration.defaultTextStyleBuilder
+              .callback(style ?? WidgetConfiguration.centerTextConfiguration.textStyle),
           textAlign: TextAlign.center,
           maxLines: maxLines,
           overflow: overflow,

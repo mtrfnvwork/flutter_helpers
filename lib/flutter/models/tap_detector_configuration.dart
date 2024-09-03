@@ -2,18 +2,11 @@ part of 'package:flutter_helpers/flutter_helpers.dart';
 
 class TapDetectorConfiguration {
   TapDetectorConfiguration({
-    TextStyle? textStyle,
+    this.textStyle,
     this.padding = EdgeInsets.zero,
-  }) : _textStyle = textStyle;
+  });
 
-  TextStyle? _textStyle;
-
-  TextStyle? get textStyle => WidgetConfiguration.defaultTextStyleBuilder.callback(_textStyle);
-
-  set textStyle(TextStyle? value) {
-    _textStyle = value;
-  }
-
+  TextStyle? textStyle;
   EdgeInsets padding;
 
   void update(TapDetectorConfiguration value) {

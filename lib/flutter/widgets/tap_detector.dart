@@ -42,7 +42,8 @@ class TapDetector extends StatelessWidget {
       padding: padding ?? WidgetConfiguration.tapDetectorConfiguration.padding,
       child: Text(
         text,
-        style: style ?? WidgetConfiguration.tapDetectorConfiguration.textStyle,
+        style: WidgetConfiguration.defaultTextStyleBuilder
+            .callback(style ?? WidgetConfiguration.tapDetectorConfiguration.textStyle),
       ),
     );
   }

@@ -6,7 +6,8 @@ void showSnackBar(
   SnackBarConfiguration? configuration,
 }) {
   var backgroundColor = configuration?.backgroundColor ?? WidgetConfiguration.snackBarConfiguration.backgroundColor;
-  var textStyle = configuration?.textStyle ?? WidgetConfiguration.snackBarConfiguration.textStyle;
+  var textStyle = WidgetConfiguration.defaultTextStyleBuilder
+      .callback(configuration?.textStyle ?? WidgetConfiguration.snackBarConfiguration.textStyle);
 
   ScaffoldMessenger.of(context)
     ..hideCurrentSnackBar()
