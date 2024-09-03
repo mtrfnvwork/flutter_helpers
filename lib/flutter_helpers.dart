@@ -51,7 +51,7 @@ part 'package:flutter_helpers/flutter/widgets/w.dart';
 
 class FlutterHelpers {
   static void configure({
-    TextStyle? defaultTextStyle,
+    TextStyle? Function(TextStyle? textStyle)? defaultTextStyleBuilder,
     YesNoDialogConfiguration? yesNoDialogConfiguration,
     TextFormFieldDialogConfiguration? textFormFieldDialogConfiguration,
     RadioButtonConfiguration? radioButtonConfiguration,
@@ -60,8 +60,8 @@ class FlutterHelpers {
     TapDetectorConfiguration? tapDetectorConfiguration,
     CenterTextConfiguration? centerTextConfiguration,
   }) {
-    if (defaultTextStyle != null) {
-      WidgetConfiguration.defaultTextStyle = defaultTextStyle;
+    if (defaultTextStyleBuilder != null) {
+      WidgetConfiguration.defaultTextStyleBuilder = defaultTextStyleBuilder;
     }
 
     if (yesNoDialogConfiguration != null) {

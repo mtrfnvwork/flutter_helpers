@@ -6,11 +6,11 @@ class TapDetectorConfiguration {
     this.padding = EdgeInsets.zero,
   });
 
-  TextStyle? textStyle = WidgetConfiguration.defaultTextStyle;
+  TextStyle? textStyle;
   EdgeInsets padding;
 
   void update(TapDetectorConfiguration value) {
-    textStyle = WidgetConfiguration.defaultTextStyle.merge(value.textStyle);
+    textStyle = WidgetConfiguration.defaultTextStyleBuilder(value.textStyle);
     padding = value.padding;
   }
 }

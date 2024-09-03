@@ -1,7 +1,7 @@
 part of 'package:flutter_helpers/flutter_helpers.dart';
 
 class WidgetConfiguration {
-  static TextStyle defaultTextStyle = const TextStyle();
+  static TextStyle? Function(TextStyle? textStyle) defaultTextStyleBuilder = (textStyle) => textStyle;
   static YesNoDialogConfiguration yesNoDialogConfiguration = YesNoDialogConfiguration();
   static TextFormFieldDialogConfiguration textFormFieldDialogConfiguration = TextFormFieldDialogConfiguration();
   static RadioButtonConfiguration radioButtonConfiguration = RadioButtonConfiguration();
