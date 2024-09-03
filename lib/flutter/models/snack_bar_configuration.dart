@@ -11,6 +11,6 @@ class SnackBarConfiguration {
 
   void update(SnackBarConfiguration value) {
     backgroundColor = value.backgroundColor;
-    textStyle = WidgetConfiguration.defaultTextStyleBuilder(value.textStyle);
+    textStyle = WidgetConfiguration.defaultTextStyleBuilder.callback(value.textStyle);
   }
 }

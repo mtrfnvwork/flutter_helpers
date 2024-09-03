@@ -10,7 +10,7 @@ class TapDetectorConfiguration {
   EdgeInsets padding;
 
   void update(TapDetectorConfiguration value) {
-    textStyle = WidgetConfiguration.defaultTextStyleBuilder(value.textStyle);
+    textStyle = WidgetConfiguration.defaultTextStyleBuilder.callback(value.textStyle);
     padding = value.padding;
   }
 }

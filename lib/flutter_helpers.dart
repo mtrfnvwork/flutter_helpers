@@ -33,6 +33,7 @@ part 'package:flutter_helpers/flutter/models/snack_bar_configuration.dart';
 part 'package:flutter_helpers/flutter/models/tap_detector_configuration.dart';
 part 'package:flutter_helpers/flutter/models/text_editing_kit.dart';
 part 'package:flutter_helpers/flutter/models/text_form_field_dialog_configuration.dart';
+part 'package:flutter_helpers/flutter/models/text_style_builder.dart';
 part 'package:flutter_helpers/flutter/models/yes_no_dialog_configuration.dart';
 part 'package:flutter_helpers/flutter/widget_configuration.dart';
 part 'package:flutter_helpers/flutter/widgets/center_text.dart';
@@ -61,7 +62,7 @@ class FlutterHelpers {
     CenterTextConfiguration? centerTextConfiguration,
   }) {
     if (defaultTextStyleBuilder != null) {
-      WidgetConfiguration.defaultTextStyleBuilder = defaultTextStyleBuilder;
+      WidgetConfiguration.defaultTextStyleBuilder.update(defaultTextStyleBuilder);
     }
 
     if (yesNoDialogConfiguration != null) {

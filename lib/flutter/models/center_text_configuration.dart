@@ -14,6 +14,6 @@ class CenterTextConfiguration {
   void update(CenterTextConfiguration value) {
     padding = value.padding;
     margin = value.margin;
-    textStyle = WidgetConfiguration.defaultTextStyleBuilder(value.textStyle);
+    textStyle = WidgetConfiguration.defaultTextStyleBuilder.callback(value.textStyle);
   }
 }
