@@ -20,6 +20,10 @@ class TextEditingKit {
 
   set text(String text) => controller.text = text;
 
+  TextEditingValue get value => controller.value;
+
+  set value(TextEditingValue value) => controller.value = value;
+
   TextSelection get selection => controller.selection;
 
   set selection(TextSelection selection) => controller.selection = selection;
