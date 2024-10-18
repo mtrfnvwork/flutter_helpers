@@ -10,7 +10,7 @@ class PageContainer extends StatelessWidget {
     required this.child,
   });
 
-  final EdgeInsets padding;
+  final EdgeInsetsGeometry padding;
   final bool topSafeArea;
   final bool bottomSafeArea;
   final Widget child;

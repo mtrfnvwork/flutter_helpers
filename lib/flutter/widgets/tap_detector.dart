@@ -15,7 +15,7 @@ class TapDetector extends StatelessWidget {
     required IconData data,
     Color? color,
     double? size,
-    EdgeInsets padding = EdgeInsets.zero,
+    EdgeInsetsGeometry padding = EdgeInsets.zero,
   }) {
     return TapDetector(
       onTap: onTap,
@@ -34,7 +34,7 @@ class TapDetector extends StatelessWidget {
     VoidCallback? onDoubleTap,
     required String text,
     TextStyle? style,
-    EdgeInsets? padding,
+    EdgeInsetsGeometry? padding,
   }) {
     return TapDetector(
       onTap: onTap,
@@ -51,7 +51,7 @@ class TapDetector extends StatelessWidget {
   final VoidCallback? onTap;
   final VoidCallback? onDoubleTap;
   final Widget child;
-  final EdgeInsets padding;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {

@@ -7,8 +7,8 @@ class CenterTextConfiguration {
     this.textStyle,
   });
 
-  EdgeInsets padding;
-  EdgeInsets margin;
+  EdgeInsetsGeometry padding;
+  EdgeInsetsGeometry margin;
   TextStyle? textStyle;
 
   void update(CenterTextConfiguration value) {

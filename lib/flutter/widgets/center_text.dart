@@ -13,8 +13,8 @@ class CenterText extends StatelessWidget {
   });
 
   final String text;
-  final EdgeInsets? padding;
-  final EdgeInsets? margin;
+  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? margin;
   final TextStyle? style;
   final BoxConstraints? constraints;
   final int? maxLines;

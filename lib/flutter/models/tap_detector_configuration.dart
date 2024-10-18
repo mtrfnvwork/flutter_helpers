@@ -7,7 +7,7 @@ class TapDetectorConfiguration {
   });
 
   TextStyle? textStyle;
-  EdgeInsets padding;
+  EdgeInsetsGeometry padding;
 
   void update(TapDetectorConfiguration value) {
     textStyle = value.textStyle;
