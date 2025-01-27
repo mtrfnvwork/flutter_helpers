@@ -1,0 +1,37 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    use_build_context_synchronously: ignore
+
+linter:
+  rules:
+    - always_declare_return_types
+    - prefer_single_quotes
+    - omit_local_variable_types
+    - prefer_final_fields
+    - unnecessary_final
+    - unnecessary_nullable_for_final_variable_declarations
+    - unnecessary_parenthesis
+    - sized_box_for_whitespace
+    - avoid_unnecessary_containers
+    - unnecessary_statements
+    - unnecessary_await_in_return
+    - unnecessary_brace_in_string_interps
+    - unnecessary_const
+    - unnecessary_lambdas
+    - unnecessary_new
+    - unnecessary_string_interpolations
+    - unnecessary_this
+    - use_named_constants
+    - prefer_conditional_assignment
+    - join_return_with_assignment
+    - prefer_interpolation_to_compose_strings
+    - use_key_in_widget_constructors
+    - sort_constructors_first
+    - avoid_slow_async_io
+    - require_trailing_commas
+    - avoid_types_on_closure_parameters
+    - avoid_bool_literals_in_conditional_expressions
+    - avoid_redundant_argument_values
+    - no_literal_bool_comparisons
