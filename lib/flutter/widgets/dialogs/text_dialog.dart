@@ -35,7 +35,7 @@ class _TextDialog extends StatelessWidget {
       actions: [
         DialogButton(
           text: okText,
-          onPressed: () => pop(context),
+          onPressed: () => Navigator.pop(context),
         ),
       ],
     );
