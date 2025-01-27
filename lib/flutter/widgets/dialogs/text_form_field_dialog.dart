@@ -84,13 +84,13 @@ class _TextFormFieldDialogState extends State<_TextFormFieldDialog> {
     var text = _controller.text;
 
     if (widget.validator == null) {
-      return Navigator.pop(context, text);
+      return pop(context, text);
     }
 
     var valid = widget.validator!(text);
 
     if (valid) {
-      Navigator.pop(context, text);
+      pop(context, text);
       return;
     }
 
@@ -140,7 +140,7 @@ class _TextFormFieldDialogState extends State<_TextFormFieldDialog> {
       actions: [
         DialogButton(
           text: widget.cancelButtonText ?? WidgetConfiguration.textFormFieldDialogConfiguration.cancelButtonText,
-          onPressed: () => Navigator.pop(context),
+          onPressed: () => pop(context),
         ),
         DialogButton(
           text: widget.confirmButtonText ?? WidgetConfiguration.textFormFieldDialogConfiguration.confirmButtonText,

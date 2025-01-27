@@ -1,3 +1,5 @@
+library flutter_helpers;
+
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -20,6 +22,7 @@ part 'package:flutter_helpers/dart/typedefs.dart';
 part 'package:flutter_helpers/dart/utils/json_parser.dart';
 part 'package:flutter_helpers/flutter/helpers/focus_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/media_query_helper.dart';
+part 'package:flutter_helpers/flutter/helpers/navigator_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/parsers.dart';
 part 'package:flutter_helpers/flutter/helpers/state_helper.dart';
 part 'package:flutter_helpers/flutter/helpers/theme_helper.dart';

@@ -38,11 +38,11 @@ class _YesNoDialog extends StatelessWidget {
       actions: [
         DialogButton(
           text: noButtonText ?? WidgetConfiguration.yesNoDialogConfiguration.noButtonText,
-          onPressed: () => Navigator.pop(context),
+          onPressed: () => pop(context),
         ),
         DialogButton(
           text: yesButtonText ?? WidgetConfiguration.yesNoDialogConfiguration.yesButtonText,
-          onPressed: () => Navigator.pop(context, true),
+          onPressed: () => pop(context, true),
         ),
       ],
     );
