@@ -28,7 +28,7 @@ extension IterableExtension<T, K extends num, V, D extends DateTime> on Iterable
       return last;
     }
 
-    for (var i = length - 1; i >= 0; i++) {
+    for (var i = length - 1; i >= 0; i--) {
       var item = elementAt(i);
 
       if (test(item)) {
