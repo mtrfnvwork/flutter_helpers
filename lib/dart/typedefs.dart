@@ -1,3 +1,3 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../flutter_helpers.dart';
 
 typedef Json = Map<String, dynamic>;

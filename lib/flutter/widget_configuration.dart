@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../legacy.dart';
 
 class WidgetConfiguration {
   static final TextStyleBuilder defaultTextStyleBuilder = TextStyleBuilder();

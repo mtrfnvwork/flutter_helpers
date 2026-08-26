@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../flutter_helpers.dart';
 
 class TapDetector extends StatelessWidget {
   const TapDetector({
@@ -6,7 +6,7 @@ class TapDetector extends StatelessWidget {
     required this.onTap,
     this.onDoubleTap,
     required this.child,
-    this.padding = EdgeInsets.zero,
+    this.padding = .zero,
   });
 
   factory TapDetector.icon({
@@ -15,7 +15,7 @@ class TapDetector extends StatelessWidget {
     required IconData data,
     Color? color,
     double? size,
-    EdgeInsetsGeometry padding = EdgeInsets.zero,
+    EdgeInsetsGeometry padding = .zero,
   }) {
     return TapDetector(
       onTap: onTap,
@@ -42,8 +42,9 @@ class TapDetector extends StatelessWidget {
       padding: padding ?? WidgetConfiguration.tapDetectorConfiguration.padding,
       child: Text(
         text,
-        style: WidgetConfiguration.defaultTextStyleBuilder
-            .callback(style ?? WidgetConfiguration.tapDetectorConfiguration.textStyle),
+        style: WidgetConfiguration.defaultTextStyleBuilder.callback(
+          style ?? WidgetConfiguration.tapDetectorConfiguration.textStyle,
+        ),
       ),
     );
   }
@@ -57,7 +58,7 @@ class TapDetector extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget body;
 
-    if (padding == EdgeInsets.zero) {
+    if (padding == .zero) {
       body = child;
     } else {
       body = Padding(
@@ -70,7 +71,7 @@ class TapDetector extends StatelessWidget {
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
-          behavior: HitTestBehavior.translucent,
+          behavior: .translucent,
           onTap: onTap,
           onDoubleTap: onDoubleTap,
           child: body,

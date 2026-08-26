@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../legacy.dart';
 
 @Deprecated('Не должен использоваться из-за проблем с появлением белой области над клавиатурой')
 class PageContainer extends StatelessWidget {
@@ -6,7 +6,7 @@ class PageContainer extends StatelessWidget {
     super.key,
     this.topSafeArea = true,
     this.bottomSafeArea = true,
-    this.padding = EdgeInsets.zero,
+    this.padding = .zero,
     required this.child,
   });
 

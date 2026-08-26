@@ -2,17 +2,15 @@ name: flutter_helpers
 version: 0.0.1
 
 environment:
-  sdk: ">=3.3.4 <4.0.0"
-  flutter: ">=3.19.6"
+  sdk: '>=3.12.2 <4.0.0'
+  flutter: ">=3.44.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  intl: ^0.20.0
-
 dev_dependencies:
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true

@@ -1,15 +1,11 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../flutter_helpers.dart';
 
 TimeOfDay? tryParseTimeOfDay(String input) {
   try {
     var split = input.split(':');
+    var parsed = TimeOfDay(hour: int.parse(split[0]), minute: int.parse(split[1]));
 
-    var parsed = TimeOfDay(
-      hour: int.parse(split[0]),
-      minute: int.parse(split[1]),
-    );
-
-    if (parsed.hour.isBetween(0, 23) && parsed.minute.isBetween(0, 59)) {
+    if (parsed.hour >= 0 && parsed.hour <= 23 && parsed.minute >= 0 && parsed.minute <= 59) {
       return parsed;
     }
   } catch (_) {}

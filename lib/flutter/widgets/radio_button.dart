@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../legacy.dart';
 
 class RadioButton<T> extends StatelessWidget {
   const RadioButton({
@@ -30,7 +30,7 @@ class RadioButton<T> extends StatelessWidget {
     return TapDetector(
       onTap: () => onChanged(value),
       child: Row(
-        mainAxisSize: MainAxisSize.min,
+        mainAxisSize: .min,
         children: [
           IgnorePointer(
             child: SizedBox.square(

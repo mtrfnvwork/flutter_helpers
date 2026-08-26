@@ -1,9 +1,9 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../legacy.dart';
 
 class TapDetectorConfiguration {
   TapDetectorConfiguration({
     this.textStyle,
-    this.padding = EdgeInsets.zero,
+    this.padding = .zero,
   });
 
   TextStyle? textStyle;

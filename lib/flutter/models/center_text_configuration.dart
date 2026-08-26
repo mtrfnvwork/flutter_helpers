@@ -1,9 +1,9 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../legacy.dart';
 
 class CenterTextConfiguration {
   CenterTextConfiguration({
-    this.padding = EdgeInsets.zero,
-    this.margin = EdgeInsets.zero,
+    this.padding = .zero,
+    this.margin = .zero,
     this.textStyle,
   });
 

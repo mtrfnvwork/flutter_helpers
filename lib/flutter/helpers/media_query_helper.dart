@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../flutter_helpers.dart';
 
 Size get screenSize {
   var view = WidgetsBinding.instance.platformDispatcher.views.first;

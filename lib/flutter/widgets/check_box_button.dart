@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../legacy.dart';
 
 class CheckBoxButton extends StatelessWidget {
   CheckBoxButton({
@@ -29,10 +29,7 @@ class CheckBoxButton extends StatelessWidget {
       Widget? ch;
 
       if (title != null) {
-        ch = Text(
-          title!,
-          style: textStyle,
-        );
+        ch = Text(title!, style: textStyle);
       } else if (child != null) {
         ch = child;
       }
@@ -50,7 +47,7 @@ class CheckBoxButton extends StatelessWidget {
 
     return TapDetector(
       child: Row(
-        mainAxisSize: MainAxisSize.min,
+        mainAxisSize: .min,
         crossAxisAlignment: crossAxisAlignment,
         children: [
           IgnorePointer(

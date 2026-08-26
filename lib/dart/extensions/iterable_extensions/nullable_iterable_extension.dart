@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../../legacy.dart';
 
 extension NullableIterableExtension<T> on Iterable<T>? {
   bool get isNullOrEmpty => this?.isNotEmpty != true;

@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../../legacy.dart';
 
 extension NullableStringExtension on String? {
   bool get isNullOrEmpty => this?.isNotEmpty != true;

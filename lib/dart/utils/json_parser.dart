@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../flutter_helpers.dart';
 
 T? tryParse<T>(dynamic value, T Function(Json json) parser) {
   if (value == null) {

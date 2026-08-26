@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../legacy.dart';
 
 class HiddenWidget extends StatelessWidget {
   const HiddenWidget({

@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../../legacy.dart';
 
 void showSnackBar(
   BuildContext context,
@@ -6,8 +6,10 @@ void showSnackBar(
   SnackBarConfiguration? configuration,
 }) {
   var backgroundColor = configuration?.backgroundColor ?? WidgetConfiguration.snackBarConfiguration.backgroundColor;
-  var textStyle = WidgetConfiguration.defaultTextStyleBuilder
-      .callback(configuration?.textStyle ?? WidgetConfiguration.snackBarConfiguration.textStyle);
+
+  var textStyle = WidgetConfiguration.defaultTextStyleBuilder.callback(
+    configuration?.textStyle ?? WidgetConfiguration.snackBarConfiguration.textStyle,
+  );
 
   ScaffoldMessenger.of(context)
     ..hideCurrentSnackBar()

@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../legacy.dart';
 
 class DialogButton extends StatelessWidget {
   const DialogButton({
@@ -16,9 +16,7 @@ class DialogButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SelectionContainer.disabled(
       child: TextButton(
-        style: TextButton.styleFrom(
-          foregroundColor: color,
-        ),
+        style: TextButton.styleFrom(foregroundColor: color),
         onPressed: onPressed,
         child: Text(text),
       ),

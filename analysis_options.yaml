@@ -3,6 +3,11 @@ include: package:flutter_lints/flutter.yaml
 analyzer:
   errors:
     use_build_context_synchronously: ignore
+    invalid_annotation_target: ignore
+    unrelated_type_equality_checks: error
+
+formatter:
+  trailing_commas: preserve
 
 linter:
   rules:
@@ -28,7 +33,6 @@ linter:
     - join_return_with_assignment
     - prefer_interpolation_to_compose_strings
     - use_key_in_widget_constructors
-    - prefer_const_constructors
     - sort_constructors_first
     - avoid_slow_async_io
     - require_trailing_commas

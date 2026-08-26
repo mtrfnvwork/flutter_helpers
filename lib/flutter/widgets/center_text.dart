@@ -1,21 +1,23 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../flutter_helpers.dart';
 
 class CenterText extends StatelessWidget {
   const CenterText(
     this.text, {
     super.key,
     this.padding,
-    this.margin,
+    @Deprecated('Будет удалено в будущем') this.margin,
     this.style,
-    this.constraints,
+    @Deprecated('Ограничения нужно задавать явно через ConstrainedBox. Будет удалено в будущем.') this.constraints,
     this.maxLines,
     this.overflow,
   });
 
   final String text;
   final EdgeInsetsGeometry? padding;
+  @Deprecated('Будет удалено в будущем')
   final EdgeInsetsGeometry? margin;
   final TextStyle? style;
+  @Deprecated('Ограничения нужно задавать явно через ConstrainedBox. Будет удалено в будущем.')
   final BoxConstraints? constraints;
   final int? maxLines;
   final TextOverflow? overflow;
@@ -28,8 +30,9 @@ class CenterText extends StatelessWidget {
         margin: margin ?? WidgetConfiguration.centerTextConfiguration.margin,
         child: Text(
           text,
-          style: WidgetConfiguration.defaultTextStyleBuilder
-              .callback(style ?? WidgetConfiguration.centerTextConfiguration.textStyle),
+          style: WidgetConfiguration.defaultTextStyleBuilder.callback(
+            style ?? WidgetConfiguration.centerTextConfiguration.textStyle,
+          ),
           textAlign: TextAlign.center,
           maxLines: maxLines,
           overflow: overflow,

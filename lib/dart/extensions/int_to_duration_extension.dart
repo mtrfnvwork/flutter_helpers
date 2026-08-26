@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../legacy.dart';
 
 extension IntToDurationExtension on int {
   Duration get microseconds => Duration(microseconds: this);

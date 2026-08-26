@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../../legacy.dart';
 
 Future<bool> showYesNoDialog(
   BuildContext context,
@@ -6,18 +6,15 @@ Future<bool> showYesNoDialog(
   String? noButtonText,
   String? yesButtonText,
 }) async {
-  var result = await showDialog(
-    context: context,
-    builder: (context) {
-      return _YesNoDialog(
-        text: text,
-        noButtonText: noButtonText,
-        yesButtonText: yesButtonText,
-      );
-    },
-  );
-
-  return result ?? false;
+  return await showDialog(
+        context: context,
+        builder: (context) => _YesNoDialog(
+          text: text,
+          noButtonText: noButtonText,
+          yesButtonText: yesButtonText,
+        ),
+      ) ??
+      false;
 }
 
 class _YesNoDialog extends StatelessWidget {

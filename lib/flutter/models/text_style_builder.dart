@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../legacy.dart';
 
 class TextStyleBuilder {
   TextStyle? Function(TextStyle? textStyle) callback = (textStyle) => textStyle;

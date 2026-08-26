@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../flutter_helpers.dart';
 
 extension TimeOfDayExtension on TimeOfDay {
   Duration toDuration() => Duration(hours: hour, minutes: minute);

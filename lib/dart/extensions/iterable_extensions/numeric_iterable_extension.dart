@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../../legacy.dart';
 
 extension NumericIterableExtension<T extends num> on Iterable<T> {
   T sum([T Function(T x)? toElement]) {

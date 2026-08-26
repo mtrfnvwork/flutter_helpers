@@ -1,8 +1,5 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../../flutter_helpers.dart';
 
 extension StringExtension on String {
-  String capitalizeFirst() {
-    assert(isNotEmpty);
-    return '${this[0].toUpperCase()}${substring(1)}';
-  }
+  String capitalizeFirst() => isNotEmpty ? '${this[0].toUpperCase()}${substring(1)}' : '';
 }

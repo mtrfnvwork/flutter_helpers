@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../flutter_helpers.dart';
 
 class H extends StatelessWidget {
   const H(
@@ -10,6 +10,8 @@ class H extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(height: value);
+    return SizedBox(
+      height: value,
+    );
   }
 }

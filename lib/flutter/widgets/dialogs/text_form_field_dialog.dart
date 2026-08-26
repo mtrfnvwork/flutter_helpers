@@ -1,4 +1,4 @@
-part of 'package:flutter_helpers/flutter_helpers.dart';
+part of '../../../legacy.dart';
 
 Future<String?> showTextFormFieldDialog(
   BuildContext context, {
@@ -13,30 +13,28 @@ Future<String?> showTextFormFieldDialog(
   String? errorText,
   int? minLines,
   int? maxLines = 1,
-  TextCapitalization textCapitalization = TextCapitalization.none,
+  TextCapitalization textCapitalization = .none,
   TextInputType? keyboardType,
 }) async {
   assert(validator == null || errorText != null);
 
   return showDialog(
     context: context,
-    builder: (dialogContext) {
-      return _TextFormFieldDialog(
-        initialValue: initialValue,
-        cancelButtonText: cancelButtonText,
-        confirmButtonText: confirmButtonText,
-        title: title,
-        hintText: hintText,
-        labelText: labelText,
-        obscureText: obscureText,
-        validator: validator,
-        errorText: errorText,
-        minLines: minLines,
-        maxLines: maxLines,
-        textCapitalization: textCapitalization,
-        keyboardType: keyboardType,
-      );
-    },
+    builder: (dialogContext) => _TextFormFieldDialog(
+      initialValue: initialValue,
+      cancelButtonText: cancelButtonText,
+      confirmButtonText: confirmButtonText,
+      title: title,
+      hintText: hintText,
+      labelText: labelText,
+      obscureText: obscureText,
+      validator: validator,
+      errorText: errorText,
+      minLines: minLines,
+      maxLines: maxLines,
+      textCapitalization: textCapitalization,
+      keyboardType: keyboardType,
+    ),
   );
 }
 
@@ -77,7 +75,6 @@ class _TextFormFieldDialog extends StatefulWidget {
 
 class _TextFormFieldDialogState extends State<_TextFormFieldDialog> {
   late TextEditingController _controller;
-
   String? _errorText;
 
   void _onConfirmPressed() {
