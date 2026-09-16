@@ -1,17 +1,11 @@
 part of '../../legacy.dart';
 
-class DialogButton extends StatelessWidget {
-  const DialogButton({
-    super.key,
-    required this.onPressed,
-    required this.text,
-    this.color,
-  });
-
-  final VoidCallback? onPressed;
-  final String text;
-  final Color? color;
-
+class const DialogButton({
+  super.key,
+  required final VoidCallback? onPressed,
+  required final String text,
+  final Color? color,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SelectionContainer.disabled(

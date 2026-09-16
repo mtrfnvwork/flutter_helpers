@@ -1,14 +1,9 @@
 part of '../../legacy.dart';
 
-class TextFormFieldDialogConfiguration {
-  TextFormFieldDialogConfiguration({
-    this.cancelButtonText = 'Отмена',
-    this.confirmButtonText = 'Подтвердить',
-  });
-
-  String cancelButtonText;
-  String confirmButtonText;
-
+class TextFormFieldDialogConfiguration({
+  var String cancelButtonText = 'Отмена',
+  var String confirmButtonText = 'Подтвердить',
+}) {
   void update(TextFormFieldDialogConfiguration value) {
     cancelButtonText = value.cancelButtonText;
     confirmButtonText = value.confirmButtonText;

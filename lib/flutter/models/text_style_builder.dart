@@ -1,6 +1,6 @@
 part of '../../legacy.dart';
 
-class TextStyleBuilder {
+class TextStyleBuilder() {
   TextStyle? Function(TextStyle? textStyle) callback = (textStyle) => textStyle;
 
   void update(TextStyle? Function(TextStyle? textStyle) value) {

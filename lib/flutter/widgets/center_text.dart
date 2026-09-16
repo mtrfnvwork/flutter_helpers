@@ -1,27 +1,16 @@
 part of '../../flutter_helpers.dart';
 
-class CenterText extends StatelessWidget {
-  const CenterText(
-    this.text, {
-    super.key,
-    this.padding,
-    @Deprecated('Будет удалено в будущем') this.margin,
-    this.style,
-    @Deprecated('Ограничения нужно задавать явно через ConstrainedBox. Будет удалено в будущем.') this.constraints,
-    this.maxLines,
-    this.overflow,
-  });
-
-  final String text;
-  final EdgeInsetsGeometry? padding;
-  @Deprecated('Будет удалено в будущем')
-  final EdgeInsetsGeometry? margin;
-  final TextStyle? style;
+class const CenterText(
+  final String text, {
+  super.key,
+  final EdgeInsetsGeometry? padding,
+  @Deprecated('Будет удалено в будущем') final EdgeInsetsGeometry? margin,
+  final TextStyle? style,
   @Deprecated('Ограничения нужно задавать явно через ConstrainedBox. Будет удалено в будущем.')
-  final BoxConstraints? constraints;
-  final int? maxLines;
-  final TextOverflow? overflow;
-
+  final BoxConstraints? constraints,
+  final int? maxLines,
+  final TextOverflow? overflow,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var child = Center(

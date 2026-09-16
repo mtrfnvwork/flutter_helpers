@@ -17,17 +17,11 @@ Future<bool> showYesNoDialog(
       false;
 }
 
-class _YesNoDialog extends StatelessWidget {
-  const _YesNoDialog({
-    required this.text,
-    required this.noButtonText,
-    required this.yesButtonText,
-  });
-
-  final String text;
-  final String? noButtonText;
-  final String? yesButtonText;
-
+class const _YesNoDialog({
+  required final String text,
+  required final String? noButtonText,
+  required final String? yesButtonText,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(

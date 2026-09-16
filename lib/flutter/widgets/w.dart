@@ -1,13 +1,9 @@
 part of '../../flutter_helpers.dart';
 
-class W extends StatelessWidget {
-  const W(
-    this.value, {
-    super.key,
-  });
-
-  final double value;
-
+class const W(
+  final double value, {
+  super.key,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(

@@ -1,12 +1,8 @@
 part of '../../legacy.dart';
 
-class RadioButtonConfiguration {
-  RadioButtonConfiguration({
-    this.spacing = 12,
-  });
-
-  double spacing;
-
+class RadioButtonConfiguration({
+  var double spacing = 12,
+}) {
   void update(RadioButtonConfiguration value) {
     spacing = value.spacing;
   }

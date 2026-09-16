@@ -1,24 +1,16 @@
 part of '../../legacy.dart';
 
-class CheckBoxButton extends StatelessWidget {
-  CheckBoxButton({
-    super.key,
-    required this.value,
-    this.title,
-    this.child,
-    required this.onChanged,
-    this.textStyle,
-    this.expands = true,
-    this.crossAxisAlignment = CrossAxisAlignment.center,
-  }) : assert([title, child].count((x) => x != null) <= 1);
-
-  final bool value;
-  final String? title;
-  final Widget? child;
-  final ValueChanged<bool> onChanged;
-  final TextStyle? textStyle;
-  final bool expands;
-  final CrossAxisAlignment crossAxisAlignment;
+class CheckBoxButton({
+  super.key,
+  required final bool value,
+  final String? title,
+  final Widget? child,
+  required final ValueChanged<bool> onChanged,
+  final TextStyle? textStyle,
+  final bool expands = true,
+  final CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
+}) extends StatelessWidget {
+  this : assert([title, child].count((x) => x != null) <= 1);
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 part of '../../legacy.dart';
 
-class WidgetConfiguration {
+class WidgetConfiguration() {
   static final TextStyleBuilder defaultTextStyleBuilder = TextStyleBuilder();
   static final YesNoDialogConfiguration yesNoDialogConfiguration = YesNoDialogConfiguration();
   static final TextFormFieldDialogConfiguration textFormFieldDialogConfiguration = TextFormFieldDialogConfiguration();

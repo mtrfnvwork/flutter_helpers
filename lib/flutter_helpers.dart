@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
 import 'package:flutter_helpers/legacy.dart';
+import 'package:material_ui/material_ui.dart';
 
 part 'package:flutter_helpers/dart/extensions/bool_extension.dart';
 part 'package:flutter_helpers/dart/extensions/date_time_extension.dart';
@@ -20,7 +20,7 @@ part 'package:flutter_helpers/flutter/widgets/h.dart';
 part 'package:flutter_helpers/flutter/widgets/tap_detector.dart';
 part 'package:flutter_helpers/flutter/widgets/w.dart';
 
-class FlutterHelpers {
+class FlutterHelpers() {
   static void configure({
     TextStyle? Function(TextStyle? textStyle)? defaultTextStyleBuilder,
     YesNoDialogConfiguration? yesNoDialogConfiguration,

@@ -38,42 +38,26 @@ Future<String?> showTextFormFieldDialog(
   );
 }
 
-class _TextFormFieldDialog extends StatefulWidget {
-  const _TextFormFieldDialog({
-    required this.initialValue,
-    required this.cancelButtonText,
-    required this.confirmButtonText,
-    required this.title,
-    required this.hintText,
-    required this.labelText,
-    required this.obscureText,
-    required this.validator,
-    required this.errorText,
-    required this.minLines,
-    required this.maxLines,
-    required this.textCapitalization,
-    required this.keyboardType,
-  });
-
-  final String? initialValue;
-  final String? cancelButtonText;
-  final String? confirmButtonText;
-  final String? title;
-  final String? hintText;
-  final String? labelText;
-  final bool obscureText;
-  final bool Function(String text)? validator;
-  final String? errorText;
-  final int? minLines;
-  final int? maxLines;
-  final TextCapitalization textCapitalization;
-  final TextInputType? keyboardType;
-
+class const _TextFormFieldDialog({
+  required final String? initialValue,
+  required final String? cancelButtonText,
+  required final String? confirmButtonText,
+  required final String? title,
+  required final String? hintText,
+  required final String? labelText,
+  required final bool obscureText,
+  required final bool Function(String text)? validator,
+  required final String? errorText,
+  required final int? minLines,
+  required final int? maxLines,
+  required final TextCapitalization textCapitalization,
+  required final TextInputType? keyboardType,
+}) extends StatefulWidget {
   @override
   State<_TextFormFieldDialog> createState() => _TextFormFieldDialogState();
 }
 
-class _TextFormFieldDialogState extends State<_TextFormFieldDialog> {
+class _TextFormFieldDialogState() extends State<_TextFormFieldDialog> {
   late TextEditingController _controller;
   String? _errorText;
 

@@ -5,6 +5,8 @@ analyzer:
     use_build_context_synchronously: ignore
     invalid_annotation_target: ignore
     unrelated_type_equality_checks: error
+  exclude:
+    - build/**
 
 formatter:
   trailing_commas: preserve
@@ -21,7 +23,6 @@ linter:
     - sized_box_for_whitespace
     - avoid_unnecessary_containers
     - unnecessary_statements
-    - unnecessary_await_in_return
     - unnecessary_brace_in_string_interps
     - unnecessary_const
     - unnecessary_lambdas
@@ -40,3 +41,10 @@ linter:
     - avoid_bool_literals_in_conditional_expressions
     - avoid_redundant_argument_values
     - no_literal_bool_comparisons
+    - use_primary_constructors
+    - empty_container_bodies
+    - initialize_in_field_declaration
+    - unnecessary_const_in_enum_constructor
+    - unnecessary_primary_constructor_body
+    - unnecessary_type_name_in_constructor
+    - use_declaring_parameters

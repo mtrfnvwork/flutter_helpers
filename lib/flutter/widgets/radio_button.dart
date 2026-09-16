@@ -1,23 +1,14 @@
 part of '../../legacy.dart';
 
-class RadioButton<T> extends StatelessWidget {
-  const RadioButton({
-    super.key,
-    required this.onChanged,
-    required this.value,
-    required this.groupValue,
-    required this.title,
-    this.textStyle,
-    this.expands = false,
-  });
-
-  final ValueChanged<T> onChanged;
-  final T value;
-  final T groupValue;
-  final String title;
-  final TextStyle? textStyle;
-  final bool expands;
-
+class const RadioButton<T>({
+  super.key,
+  required final ValueChanged<T> onChanged,
+  required final T value,
+  required final T groupValue,
+  required final String title,
+  final TextStyle? textStyle,
+  final bool expands = false,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const size = 24.0;

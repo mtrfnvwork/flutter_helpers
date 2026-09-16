@@ -1,15 +1,13 @@
 part of '../../flutter_helpers.dart';
 
-class TapDetector extends StatelessWidget {
-  const TapDetector({
-    super.key,
-    required this.onTap,
-    this.onDoubleTap,
-    required this.child,
-    this.padding = .zero,
-  });
-
-  factory TapDetector.icon({
+class const TapDetector({
+  super.key,
+  required final VoidCallback? onTap,
+  final VoidCallback? onDoubleTap,
+  required final Widget child,
+  final EdgeInsetsGeometry padding = .zero,
+}) extends StatelessWidget {
+  factory icon({
     required VoidCallback? onTap,
     VoidCallback? onDoubleTap,
     required IconData data,
@@ -29,7 +27,7 @@ class TapDetector extends StatelessWidget {
     );
   }
 
-  factory TapDetector.text({
+  factory text({
     required VoidCallback? onTap,
     VoidCallback? onDoubleTap,
     required String text,
@@ -48,11 +46,6 @@ class TapDetector extends StatelessWidget {
       ),
     );
   }
-
-  final VoidCallback? onTap;
-  final VoidCallback? onDoubleTap;
-  final Widget child;
-  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {

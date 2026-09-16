@@ -1,14 +1,9 @@
 part of '../../legacy.dart';
 
-class TapDetectorConfiguration {
-  TapDetectorConfiguration({
-    this.textStyle,
-    this.padding = .zero,
-  });
-
-  TextStyle? textStyle;
-  EdgeInsetsGeometry padding;
-
+class TapDetectorConfiguration({
+  var TextStyle? textStyle,
+  var EdgeInsetsGeometry padding = .zero,
+}) {
   void update(TapDetectorConfiguration value) {
     textStyle = value.textStyle;
     padding = value.padding;

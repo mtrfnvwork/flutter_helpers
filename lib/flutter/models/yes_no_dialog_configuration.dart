@@ -1,14 +1,9 @@
 part of '../../legacy.dart';
 
-class YesNoDialogConfiguration {
-  YesNoDialogConfiguration({
-    this.noButtonText = 'Нет',
-    this.yesButtonText = 'Да',
-  });
-
-  String noButtonText;
-  String yesButtonText;
-
+class YesNoDialogConfiguration({
+  var String noButtonText = 'Нет',
+  var String yesButtonText = 'Да',
+}) {
   void update(YesNoDialogConfiguration value) {
     noButtonText = value.noButtonText;
     yesButtonText = value.yesButtonText;

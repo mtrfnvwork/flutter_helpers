@@ -16,17 +16,11 @@ Future<void> showTextDialog(
   );
 }
 
-class _TextDialog extends StatelessWidget {
-  const _TextDialog({
-    required this.title,
-    required this.text,
-    required this.okText,
-  });
-
-  final String? title;
-  final String text;
-  final String okText;
-
+class const _TextDialog({
+  required final String? title,
+  required final String text,
+  required final String okText,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(

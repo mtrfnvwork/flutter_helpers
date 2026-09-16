@@ -1,17 +1,11 @@
 part of '../../legacy.dart';
 
-class HiddenWidget extends StatelessWidget {
-  const HiddenWidget({
-    super.key,
-    required this.hide,
-    required this.child,
-    this.animationDuration = const Duration(milliseconds: 100),
-  });
-
-  final bool hide;
-  final Widget child;
-  final Duration animationDuration;
-
+class const HiddenWidget({
+  super.key,
+  required final bool hide,
+  required final Widget child,
+  final Duration animationDuration = const Duration(milliseconds: 100),
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IgnorePointer(

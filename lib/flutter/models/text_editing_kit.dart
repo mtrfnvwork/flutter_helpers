@@ -1,20 +1,19 @@
 part of '../../flutter_helpers.dart';
 
 @immutable
-class TextEditingKit {
-  TextEditingKit({
-    TextEditingController? controller,
-    FocusNode? focusNode,
-    String? text,
-  }) : assert(
-         controller == null || text == null,
-         'Если контроллер не равен null, текст должен устанавливаться непосредственно в контроллер, а не передаваться в качестве параметра в данный конструктор',
-       ),
-       controller = controller ?? TextEditingController(text: text),
-       focusNode = focusNode ?? FocusNode();
+class TextEditingKit({
+  TextEditingController? controller,
+  FocusNode? focusNode,
+  String? text,
+}) {
+  this
+    : assert(
+        controller == null || text == null,
+        'Если контроллер не равен null, текст должен устанавливаться непосредственно в контроллер, а не передаваться в качестве параметра в данный конструктор',
+      );
 
-  final TextEditingController controller;
-  final FocusNode focusNode;
+  final TextEditingController controller = controller ?? TextEditingController(text: text);
+  final FocusNode focusNode = focusNode ?? FocusNode();
 
   String get text => controller.text;
 
